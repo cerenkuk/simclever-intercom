@@ -1,0 +1,31 @@
+version: "turkish_asr_verbatim_v2"
+description: "SimClever Intercom Paket 3 Türkçe ASR Verbatim Normalizasyon Yapılandırması"
+
+mappings:
+  dr: "doktor"
+  "dr.": "doktor"
+
+fillers:
+  canonical_non_lexical:
+    - pattern: "\\b(ı+)\\b"
+      replacement: "ıı"
+    - pattern: "\\b(e+)\\b"
+      replacement: "ee"
+    - pattern: "\\b(hım|hmm|hmmm)\\b"
+      replacement: "hım"
+
+lexical_fillers:
+  preserve_tokens:
+    - "şey"
+    - "yani"
+    - "hani"
+    - "işte"
+    - "mesela"
+    - "falan"
+
+medical_terms:
+  strict_preservation:
+    - "svt"
+    - "ekg"
+    - "iv"
+    - "qrs"

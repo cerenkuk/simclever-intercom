@@ -1,0 +1,11 @@
+PyQt5>=5.15.9
+numpy>=1.20.0
+sounddevice>=0.4.6
+soundfile>=0.12.1
+opuslib-next>=1.3.0
+pywebrtc-audio>=0.1.0
+pyaec>=0.1.0
+webrtcvad-wheels>=2.0.10
+numba>=0.57.0
+onnxruntime>=1.15.0
+keyboard>=0.13.5

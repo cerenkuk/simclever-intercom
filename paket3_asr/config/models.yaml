@@ -1,0 +1,138 @@
+# Paket 3 ASR Candidate Models Configuration
+
+models:
+  - id: faster-whisper-small-int8
+    name: "Faster-Whisper Small (int8 CPU)"
+    engine: "faster-whisper"
+    model_name: "small"
+    device: "cpu"
+    compute_type: "int8"
+    vram_required_gb: 1.0
+    enabled: true
+    notes: "Pilot model for single-video test pipeline on CPU."
+
+  - id: faster-whisper-large-v3-turbo-int8
+    name: "Whisper Large v3 Turbo - CPU int8"
+    engine: "faster-whisper"
+    model_name: "large-v3-turbo"
+    device: "cpu"
+    compute_type: "int8"
+    vram_required_gb: 2.5
+    enabled: true
+    notes: "Official Turbo finalist model for CPU int8 execution."
+
+  - id: distil-whisper-large-v3-tr
+    name: "Sercan Distil-Whisper Large v3 TR"
+    engine: "transformers"
+    model_name: "Sercan/distil-whisper-large-v3-tr"
+    device: "cpu"
+    compute_type: "float32"
+    vram_required_gb: 3.0
+    enabled: true
+    notes: "Turkish fine-tuned distilled Whisper model using HuggingFace transformers."
+
+  - id: whisper-large-v3
+    name: "OpenAI Whisper Large v3"
+    engine: "openai-whisper"
+    model_name: "large-v3"
+    vram_required_gb: 10.0
+    quantization: "fp16"
+    enabled: false
+    notes: "Baseline model; requires high VRAM or quantization on laptop GPUs."
+
+  - id: whisper-large-v3-turbo
+    name: "OpenAI Whisper Large v3 Turbo (Deprecated)"
+    engine: "openai-whisper"
+    model_name: "large-v3-turbo"
+    vram_required_gb: 6.0
+    quantization: "fp16"
+    enabled: false
+    deprecated: true
+    notes: "DEPRECATED: Use faster-whisper-large-v3-turbo-int8 instead."
+
+  - id: whisper-medium
+    name: "OpenAI Whisper Medium"
+    engine: "openai-whisper"
+    model_name: "medium"
+    vram_required_gb: 5.0
+    quantization: "fp16"
+    enabled: false
+    notes: "Lower VRAM baseline for weak hardware."
+
+  - id: faster-whisper-large-v3-int8
+    name: "Faster-Whisper Large v3 (int8)"
+    engine: "faster-whisper"
+    model_name: "large-v3"
+    compute_type: "int8"
+    vram_required_gb: 3.5
+    enabled: true
+    notes: "CTranslate2 int8 quantized model for laptop GPU VRAM fit."
+
+  - id: faster-whisper-turbo-int8
+    name: "Faster-Whisper Turbo (int8 Deprecated)"
+    engine: "faster-whisper"
+    model_name: "deepdml/faster-whisper-large-v3-turbo"
+    compute_type: "int8"
+    vram_required_gb: 2.5
+    enabled: false
+    deprecated: true
+    notes: "DEPRECATED: Use faster-whisper-large-v3-turbo-int8 instead."
+
+  - id: turkish-fine-tuned-whisper
+    name: "Turkish Fine-Tuned Whisper (Community)"
+    engine: "huggingface"
+    model_name: "bensu/whisper-medium-turkish"
+    vram_required_gb: 5.0
+    enabled: false
+    notes: "Turkish domain specific fine-tuned Whisper variant."
+
+  - id: nvidia-canary-1b
+    name: "NVIDIA Canary 1B"
+    engine: "nemo"
+    model_name: "nvidia/canary-1b"
+    vram_required_gb: 6.0
+    enabled: false
+    notes: "High accuracy multi-lingual candidate."
+
+  - id: faster-whisper-medium-int8
+    name: "Whisper Medium - CPU int8"
+    engine: "faster-whisper"
+    model_name: "medium"
+    device: "cpu"
+    compute_type: "int8"
+    enabled: true
+    role: "weak_hardware_reference"
+    notes: "Zayıf donanım doğruk-hız-RAM karşılaştırma modeli; finalist değildir."
+
+  - id: qwen3-asr-0.6b-hf
+    name: "Qwen3-ASR 0.6B HF"
+    engine: "transformers"
+    model_name: "Qwen/Qwen3-ASR-0.6B-hf"
+    device: "cpu"
+    compute_type: "float32"
+    vram_required_gb: 2.0
+    enabled: true
+    role: "candidate_prescreen"
+    notes: "Qwen3 0.6B all-in-one ASR model for Turkish CPU evaluation."
+
+  - id: qwen3-asr-1.7b-hf
+    name: "Qwen3-ASR 1.7B HF"
+    engine: "transformers"
+    model_name: "Qwen/Qwen3-ASR-1.7B-hf"
+    device: "cpu"
+    compute_type: "float32"
+    vram_required_gb: 5.0
+    enabled: true
+    role: "candidate_prescreen"
+    notes: "Qwen3 1.7B flagship ASR model for Turkish CPU evaluation."
+
+  - id: nvidia-nemotron-3.5-asr-0.6b
+    name: "NVIDIA Nemotron 3.5 ASR 0.6B"
+    engine: "transformers"
+    model_name: "nvidia/nemotron-3.5-asr-streaming-0.6b"
+    device: "cpu"
+    compute_type: "float32"
+    vram_required_gb: 2.5
+    enabled: true
+    role: "candidate_prescreen"
+    notes: "NVIDIA FastConformer multilingual streaming/batch ASR model."

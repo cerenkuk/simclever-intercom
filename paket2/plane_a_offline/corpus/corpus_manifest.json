@@ -1,0 +1,2943 @@
+{
+  "clean_male_medical.wav": {
+    "text": "hasta saturasyonu düşüyor adrenalin verelim",
+    "medical_terms": [
+      "saturasyonu",
+      "adrenalin"
+    ]
+  },
+  "clean_female_medical.wav": {
+    "text": "hasta saturasyonu düşüyor adrenalin verelim",
+    "medical_terms": [
+      "saturasyonu",
+      "adrenalin"
+    ]
+  },
+  "corpus_items": [
+    {
+      "filename": "noisy_device_alarm_snr-5dB_rev0ms_near.wav",
+      "noise_type": "device_alarm",
+      "snr_db": -5,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr-5dB_rev0ms_mid.wav",
+      "noise_type": "device_alarm",
+      "snr_db": -5,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr-5dB_rev0ms_far.wav",
+      "noise_type": "device_alarm",
+      "snr_db": -5,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr-5dB_rev300ms_near.wav",
+      "noise_type": "device_alarm",
+      "snr_db": -5,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr-5dB_rev300ms_mid.wav",
+      "noise_type": "device_alarm",
+      "snr_db": -5,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr-5dB_rev300ms_far.wav",
+      "noise_type": "device_alarm",
+      "snr_db": -5,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr-5dB_rev600ms_near.wav",
+      "noise_type": "device_alarm",
+      "snr_db": -5,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr-5dB_rev600ms_mid.wav",
+      "noise_type": "device_alarm",
+      "snr_db": -5,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr-5dB_rev600ms_far.wav",
+      "noise_type": "device_alarm",
+      "snr_db": -5,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr0dB_rev0ms_near.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 0,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr0dB_rev0ms_mid.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 0,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr0dB_rev0ms_far.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 0,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr0dB_rev300ms_near.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 0,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr0dB_rev300ms_mid.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 0,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr0dB_rev300ms_far.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 0,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr0dB_rev600ms_near.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 0,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr0dB_rev600ms_mid.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 0,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr0dB_rev600ms_far.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 0,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr5dB_rev0ms_near.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 5,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr5dB_rev0ms_mid.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 5,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr5dB_rev0ms_far.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 5,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr5dB_rev300ms_near.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 5,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr5dB_rev300ms_mid.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 5,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr5dB_rev300ms_far.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 5,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr5dB_rev600ms_near.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 5,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr5dB_rev600ms_mid.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 5,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr5dB_rev600ms_far.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 5,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr10dB_rev0ms_near.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 10,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr10dB_rev0ms_mid.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 10,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr10dB_rev0ms_far.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 10,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr10dB_rev300ms_near.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 10,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr10dB_rev300ms_mid.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 10,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr10dB_rev300ms_far.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 10,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr10dB_rev600ms_near.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 10,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr10dB_rev600ms_mid.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 10,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr10dB_rev600ms_far.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 10,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr15dB_rev0ms_near.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 15,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr15dB_rev0ms_mid.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 15,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr15dB_rev0ms_far.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 15,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr15dB_rev300ms_near.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 15,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr15dB_rev300ms_mid.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 15,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr15dB_rev300ms_far.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 15,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr15dB_rev600ms_near.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 15,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr15dB_rev600ms_mid.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 15,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_device_alarm_snr15dB_rev600ms_far.wav",
+      "noise_type": "device_alarm",
+      "snr_db": 15,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr-5dB_rev0ms_near.wav",
+      "noise_type": "static_noise",
+      "snr_db": -5,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr-5dB_rev0ms_mid.wav",
+      "noise_type": "static_noise",
+      "snr_db": -5,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr-5dB_rev0ms_far.wav",
+      "noise_type": "static_noise",
+      "snr_db": -5,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr-5dB_rev300ms_near.wav",
+      "noise_type": "static_noise",
+      "snr_db": -5,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr-5dB_rev300ms_mid.wav",
+      "noise_type": "static_noise",
+      "snr_db": -5,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr-5dB_rev300ms_far.wav",
+      "noise_type": "static_noise",
+      "snr_db": -5,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr-5dB_rev600ms_near.wav",
+      "noise_type": "static_noise",
+      "snr_db": -5,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr-5dB_rev600ms_mid.wav",
+      "noise_type": "static_noise",
+      "snr_db": -5,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr-5dB_rev600ms_far.wav",
+      "noise_type": "static_noise",
+      "snr_db": -5,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr0dB_rev0ms_near.wav",
+      "noise_type": "static_noise",
+      "snr_db": 0,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr0dB_rev0ms_mid.wav",
+      "noise_type": "static_noise",
+      "snr_db": 0,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr0dB_rev0ms_far.wav",
+      "noise_type": "static_noise",
+      "snr_db": 0,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr0dB_rev300ms_near.wav",
+      "noise_type": "static_noise",
+      "snr_db": 0,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr0dB_rev300ms_mid.wav",
+      "noise_type": "static_noise",
+      "snr_db": 0,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr0dB_rev300ms_far.wav",
+      "noise_type": "static_noise",
+      "snr_db": 0,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr0dB_rev600ms_near.wav",
+      "noise_type": "static_noise",
+      "snr_db": 0,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr0dB_rev600ms_mid.wav",
+      "noise_type": "static_noise",
+      "snr_db": 0,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr0dB_rev600ms_far.wav",
+      "noise_type": "static_noise",
+      "snr_db": 0,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr5dB_rev0ms_near.wav",
+      "noise_type": "static_noise",
+      "snr_db": 5,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr5dB_rev0ms_mid.wav",
+      "noise_type": "static_noise",
+      "snr_db": 5,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr5dB_rev0ms_far.wav",
+      "noise_type": "static_noise",
+      "snr_db": 5,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr5dB_rev300ms_near.wav",
+      "noise_type": "static_noise",
+      "snr_db": 5,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr5dB_rev300ms_mid.wav",
+      "noise_type": "static_noise",
+      "snr_db": 5,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr5dB_rev300ms_far.wav",
+      "noise_type": "static_noise",
+      "snr_db": 5,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr5dB_rev600ms_near.wav",
+      "noise_type": "static_noise",
+      "snr_db": 5,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr5dB_rev600ms_mid.wav",
+      "noise_type": "static_noise",
+      "snr_db": 5,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr5dB_rev600ms_far.wav",
+      "noise_type": "static_noise",
+      "snr_db": 5,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr10dB_rev0ms_near.wav",
+      "noise_type": "static_noise",
+      "snr_db": 10,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr10dB_rev0ms_mid.wav",
+      "noise_type": "static_noise",
+      "snr_db": 10,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr10dB_rev0ms_far.wav",
+      "noise_type": "static_noise",
+      "snr_db": 10,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr10dB_rev300ms_near.wav",
+      "noise_type": "static_noise",
+      "snr_db": 10,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr10dB_rev300ms_mid.wav",
+      "noise_type": "static_noise",
+      "snr_db": 10,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr10dB_rev300ms_far.wav",
+      "noise_type": "static_noise",
+      "snr_db": 10,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr10dB_rev600ms_near.wav",
+      "noise_type": "static_noise",
+      "snr_db": 10,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr10dB_rev600ms_mid.wav",
+      "noise_type": "static_noise",
+      "snr_db": 10,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr10dB_rev600ms_far.wav",
+      "noise_type": "static_noise",
+      "snr_db": 10,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr15dB_rev0ms_near.wav",
+      "noise_type": "static_noise",
+      "snr_db": 15,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr15dB_rev0ms_mid.wav",
+      "noise_type": "static_noise",
+      "snr_db": 15,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr15dB_rev0ms_far.wav",
+      "noise_type": "static_noise",
+      "snr_db": 15,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr15dB_rev300ms_near.wav",
+      "noise_type": "static_noise",
+      "snr_db": 15,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr15dB_rev300ms_mid.wav",
+      "noise_type": "static_noise",
+      "snr_db": 15,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr15dB_rev300ms_far.wav",
+      "noise_type": "static_noise",
+      "snr_db": 15,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr15dB_rev600ms_near.wav",
+      "noise_type": "static_noise",
+      "snr_db": 15,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr15dB_rev600ms_mid.wav",
+      "noise_type": "static_noise",
+      "snr_db": 15,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_static_noise_snr15dB_rev600ms_far.wav",
+      "noise_type": "static_noise",
+      "snr_db": 15,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr-5dB_rev0ms_near.wav",
+      "noise_type": "office_corridor",
+      "snr_db": -5,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr-5dB_rev0ms_mid.wav",
+      "noise_type": "office_corridor",
+      "snr_db": -5,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr-5dB_rev0ms_far.wav",
+      "noise_type": "office_corridor",
+      "snr_db": -5,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr-5dB_rev300ms_near.wav",
+      "noise_type": "office_corridor",
+      "snr_db": -5,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr-5dB_rev300ms_mid.wav",
+      "noise_type": "office_corridor",
+      "snr_db": -5,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr-5dB_rev300ms_far.wav",
+      "noise_type": "office_corridor",
+      "snr_db": -5,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr-5dB_rev600ms_near.wav",
+      "noise_type": "office_corridor",
+      "snr_db": -5,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr-5dB_rev600ms_mid.wav",
+      "noise_type": "office_corridor",
+      "snr_db": -5,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr-5dB_rev600ms_far.wav",
+      "noise_type": "office_corridor",
+      "snr_db": -5,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr0dB_rev0ms_near.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 0,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr0dB_rev0ms_mid.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 0,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr0dB_rev0ms_far.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 0,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr0dB_rev300ms_near.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 0,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr0dB_rev300ms_mid.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 0,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr0dB_rev300ms_far.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 0,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr0dB_rev600ms_near.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 0,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr0dB_rev600ms_mid.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 0,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr0dB_rev600ms_far.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 0,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr5dB_rev0ms_near.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 5,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr5dB_rev0ms_mid.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 5,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr5dB_rev0ms_far.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 5,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr5dB_rev300ms_near.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 5,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr5dB_rev300ms_mid.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 5,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr5dB_rev300ms_far.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 5,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr5dB_rev600ms_near.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 5,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr5dB_rev600ms_mid.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 5,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr5dB_rev600ms_far.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 5,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr10dB_rev0ms_near.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 10,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr10dB_rev0ms_mid.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 10,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr10dB_rev0ms_far.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 10,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr10dB_rev300ms_near.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 10,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr10dB_rev300ms_mid.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 10,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr10dB_rev300ms_far.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 10,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr10dB_rev600ms_near.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 10,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr10dB_rev600ms_mid.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 10,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr10dB_rev600ms_far.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 10,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr15dB_rev0ms_near.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 15,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr15dB_rev0ms_mid.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 15,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr15dB_rev0ms_far.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 15,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr15dB_rev300ms_near.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 15,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr15dB_rev300ms_mid.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 15,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr15dB_rev300ms_far.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 15,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr15dB_rev600ms_near.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 15,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr15dB_rev600ms_mid.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 15,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_office_corridor_snr15dB_rev600ms_far.wav",
+      "noise_type": "office_corridor",
+      "snr_db": 15,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr-5dB_rev0ms_near.wav",
+      "noise_type": "babble",
+      "snr_db": -5,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr-5dB_rev0ms_mid.wav",
+      "noise_type": "babble",
+      "snr_db": -5,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr-5dB_rev0ms_far.wav",
+      "noise_type": "babble",
+      "snr_db": -5,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr-5dB_rev300ms_near.wav",
+      "noise_type": "babble",
+      "snr_db": -5,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr-5dB_rev300ms_mid.wav",
+      "noise_type": "babble",
+      "snr_db": -5,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr-5dB_rev300ms_far.wav",
+      "noise_type": "babble",
+      "snr_db": -5,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr-5dB_rev600ms_near.wav",
+      "noise_type": "babble",
+      "snr_db": -5,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr-5dB_rev600ms_mid.wav",
+      "noise_type": "babble",
+      "snr_db": -5,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr-5dB_rev600ms_far.wav",
+      "noise_type": "babble",
+      "snr_db": -5,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr0dB_rev0ms_near.wav",
+      "noise_type": "babble",
+      "snr_db": 0,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr0dB_rev0ms_mid.wav",
+      "noise_type": "babble",
+      "snr_db": 0,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr0dB_rev0ms_far.wav",
+      "noise_type": "babble",
+      "snr_db": 0,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr0dB_rev300ms_near.wav",
+      "noise_type": "babble",
+      "snr_db": 0,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr0dB_rev300ms_mid.wav",
+      "noise_type": "babble",
+      "snr_db": 0,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr0dB_rev300ms_far.wav",
+      "noise_type": "babble",
+      "snr_db": 0,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr0dB_rev600ms_near.wav",
+      "noise_type": "babble",
+      "snr_db": 0,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr0dB_rev600ms_mid.wav",
+      "noise_type": "babble",
+      "snr_db": 0,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr0dB_rev600ms_far.wav",
+      "noise_type": "babble",
+      "snr_db": 0,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr5dB_rev0ms_near.wav",
+      "noise_type": "babble",
+      "snr_db": 5,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr5dB_rev0ms_mid.wav",
+      "noise_type": "babble",
+      "snr_db": 5,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr5dB_rev0ms_far.wav",
+      "noise_type": "babble",
+      "snr_db": 5,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr5dB_rev300ms_near.wav",
+      "noise_type": "babble",
+      "snr_db": 5,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr5dB_rev300ms_mid.wav",
+      "noise_type": "babble",
+      "snr_db": 5,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr5dB_rev300ms_far.wav",
+      "noise_type": "babble",
+      "snr_db": 5,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr5dB_rev600ms_near.wav",
+      "noise_type": "babble",
+      "snr_db": 5,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr5dB_rev600ms_mid.wav",
+      "noise_type": "babble",
+      "snr_db": 5,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr5dB_rev600ms_far.wav",
+      "noise_type": "babble",
+      "snr_db": 5,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr10dB_rev0ms_near.wav",
+      "noise_type": "babble",
+      "snr_db": 10,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr10dB_rev0ms_mid.wav",
+      "noise_type": "babble",
+      "snr_db": 10,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr10dB_rev0ms_far.wav",
+      "noise_type": "babble",
+      "snr_db": 10,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr10dB_rev300ms_near.wav",
+      "noise_type": "babble",
+      "snr_db": 10,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr10dB_rev300ms_mid.wav",
+      "noise_type": "babble",
+      "snr_db": 10,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr10dB_rev300ms_far.wav",
+      "noise_type": "babble",
+      "snr_db": 10,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr10dB_rev600ms_near.wav",
+      "noise_type": "babble",
+      "snr_db": 10,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr10dB_rev600ms_mid.wav",
+      "noise_type": "babble",
+      "snr_db": 10,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr10dB_rev600ms_far.wav",
+      "noise_type": "babble",
+      "snr_db": 10,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr15dB_rev0ms_near.wav",
+      "noise_type": "babble",
+      "snr_db": 15,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr15dB_rev0ms_mid.wav",
+      "noise_type": "babble",
+      "snr_db": 15,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr15dB_rev0ms_far.wav",
+      "noise_type": "babble",
+      "snr_db": 15,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr15dB_rev300ms_near.wav",
+      "noise_type": "babble",
+      "snr_db": 15,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr15dB_rev300ms_mid.wav",
+      "noise_type": "babble",
+      "snr_db": 15,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr15dB_rev300ms_far.wav",
+      "noise_type": "babble",
+      "snr_db": 15,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr15dB_rev600ms_near.wav",
+      "noise_type": "babble",
+      "snr_db": 15,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr15dB_rev600ms_mid.wav",
+      "noise_type": "babble",
+      "snr_db": 15,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_babble_snr15dB_rev600ms_far.wav",
+      "noise_type": "babble",
+      "snr_db": 15,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr-5dB_rev0ms_near.wav",
+      "noise_type": "impact_noise",
+      "snr_db": -5,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr-5dB_rev0ms_mid.wav",
+      "noise_type": "impact_noise",
+      "snr_db": -5,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr-5dB_rev0ms_far.wav",
+      "noise_type": "impact_noise",
+      "snr_db": -5,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr-5dB_rev300ms_near.wav",
+      "noise_type": "impact_noise",
+      "snr_db": -5,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr-5dB_rev300ms_mid.wav",
+      "noise_type": "impact_noise",
+      "snr_db": -5,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr-5dB_rev300ms_far.wav",
+      "noise_type": "impact_noise",
+      "snr_db": -5,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr-5dB_rev600ms_near.wav",
+      "noise_type": "impact_noise",
+      "snr_db": -5,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr-5dB_rev600ms_mid.wav",
+      "noise_type": "impact_noise",
+      "snr_db": -5,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr-5dB_rev600ms_far.wav",
+      "noise_type": "impact_noise",
+      "snr_db": -5,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr0dB_rev0ms_near.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 0,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr0dB_rev0ms_mid.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 0,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr0dB_rev0ms_far.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 0,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr0dB_rev300ms_near.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 0,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr0dB_rev300ms_mid.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 0,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr0dB_rev300ms_far.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 0,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr0dB_rev600ms_near.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 0,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr0dB_rev600ms_mid.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 0,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr0dB_rev600ms_far.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 0,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr5dB_rev0ms_near.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 5,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr5dB_rev0ms_mid.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 5,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr5dB_rev0ms_far.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 5,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr5dB_rev300ms_near.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 5,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr5dB_rev300ms_mid.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 5,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr5dB_rev300ms_far.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 5,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr5dB_rev600ms_near.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 5,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr5dB_rev600ms_mid.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 5,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr5dB_rev600ms_far.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 5,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr10dB_rev0ms_near.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 10,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr10dB_rev0ms_mid.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 10,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr10dB_rev0ms_far.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 10,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr10dB_rev300ms_near.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 10,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr10dB_rev300ms_mid.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 10,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr10dB_rev300ms_far.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 10,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr10dB_rev600ms_near.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 10,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr10dB_rev600ms_mid.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 10,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr10dB_rev600ms_far.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 10,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr15dB_rev0ms_near.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 15,
+      "reverb_t60": 0.0,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr15dB_rev0ms_mid.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 15,
+      "reverb_t60": 0.0,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr15dB_rev0ms_far.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 15,
+      "reverb_t60": 0.0,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr15dB_rev300ms_near.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 15,
+      "reverb_t60": 0.3,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr15dB_rev300ms_mid.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 15,
+      "reverb_t60": 0.3,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr15dB_rev300ms_far.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 15,
+      "reverb_t60": 0.3,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr15dB_rev600ms_near.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 15,
+      "reverb_t60": 0.6,
+      "distance": "near",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr15dB_rev600ms_mid.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 15,
+      "reverb_t60": 0.6,
+      "distance": "mid",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    },
+    {
+      "filename": "noisy_impact_noise_snr15dB_rev600ms_far.wav",
+      "noise_type": "impact_noise",
+      "snr_db": 15,
+      "reverb_t60": 0.6,
+      "distance": "far",
+      "reference_clean": "clean_male_medical.wav",
+      "text": "hasta saturasyonu düşüyor adrenalin verelim",
+      "medical_terms": [
+        "saturasyonu",
+        "adrenalin"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,383 @@
+# Paket 3 - Kayıt Bazlı Tıbbi Terim Sözlüğü
+# UYARI: Bu dosyadaki terimler yapay zekâ (LLM) tarafından aday olarak çıkarılmıştır.
+# Nihai raporda kullanılmadan önce insan doğrulaması gerektirilmektedir.
+# review_required: true olan terimler öncelikli doğrulama gerektirir.
+#
+# Eşleştirme kuralı:
+#   - Tek kelimeli terim: tam kelime eşleşmesi (büyük/küçük harf normalize)
+#   - Çok kelimeli terim: bitişik token sırası
+#   - Ek almış kelime desteği: minimum 5 karakter prefix kontrolü
+#   - Aşırı gevşek substring eşleştirmesi kullanılmaz
+#
+# Sütunlar: term, review_required, category
+# Kategoriler: hastalik, ilac, anatomik, semptom, vital, klinik_islem,
+#              klinik_bulgu, klinik_kavram, tani_yontemi, tibbi_cihaz,
+#              uzmanlik, saglik_birimi, hasta_grubu, tedavi, egitim
+
+video_01_genel_anamnez:
+  - term: "anamnez"
+    review_required: false
+    category: klinik_islem
+  - term: "demonstrasyon"
+    review_required: false
+    category: egitim
+  - term: "dahiliye"
+    review_required: false
+    category: uzmanlik
+  - term: "ic hastaliklari"
+    review_required: false
+    category: uzmanlik
+  - term: "sistemik sorgulama"
+    review_required: true
+    category: klinik_islem
+  - term: "solunum sistemi"
+    review_required: false
+    category: anatomik
+  - term: "kardiyovaskuler sistem"
+    review_required: false
+    category: anatomik
+  - term: "dispne"
+    review_required: false
+    category: semptom
+  - term: "nefes darligi"
+    review_required: false
+    category: semptom
+  - term: "gece terleme"
+    review_required: false
+    category: semptom
+  - term: "kilo kaybi"
+    review_required: false
+    category: semptom
+  - term: "ates"
+    review_required: false
+    category: semptom
+  - term: "oksuruk"
+    review_required: false
+    category: semptom
+  - term: "balgam"
+    review_required: false
+    category: semptom
+  - term: "muayene"
+    review_required: false
+    category: klinik_islem
+  - term: "tanikoyma"
+    review_required: true
+    category: klinik_islem
+
+video_02_psikiyatrik_anamnez:
+  - term: "psikiyatrik anamnez"
+    review_required: false
+    category: klinik_islem
+  - term: "ruhsal durum muayenesi"
+    review_required: false
+    category: klinik_islem
+  - term: "psikiyatrik"
+    review_required: false
+    category: uzmanlik
+  - term: "antidepresan"
+    review_required: false
+    category: ilac
+  - term: "hipotiroidi"
+    review_required: false
+    category: hastalik
+  - term: "euthyrox"
+    review_required: false
+    category: ilac
+  - term: "paroksetin"
+    review_required: true
+    category: ilac
+  - term: "fluoksetin"
+    review_required: true
+    category: ilac
+  - term: "sertralin"
+    review_required: true
+    category: ilac
+  - term: "depresyon"
+    review_required: false
+    category: hastalik
+  - term: "anksiyete"
+    review_required: false
+    category: hastalik
+  - term: "oryantasyon"
+    review_required: false
+    category: klinik_islem
+  - term: "affect"
+    review_required: true
+    category: klinik_kavram
+  - term: "kognitif"
+    review_required: false
+    category: klinik_kavram
+  - term: "intihar"
+    review_required: false
+    category: klinik_kavram
+  - term: "halusinasyon"
+    review_required: false
+    category: semptom
+  - term: "illuzyon"
+    review_required: true
+    category: semptom
+
+video_03_pediatrik_anamnez:
+  - term: "pediatrik"
+    review_required: false
+    category: uzmanlik
+  - term: "pediatri"
+    review_required: false
+    category: uzmanlik
+  - term: "cocuk hastaliklari"
+    review_required: false
+    category: uzmanlik
+  - term: "asi"
+    review_required: false
+    category: klinik_islem
+  - term: "gelisim takibi"
+    review_required: false
+    category: klinik_islem
+  - term: "besi aliskanligi"
+    review_required: false
+    category: klinik_kavram
+  - term: "ates"
+    review_required: false
+    category: semptom
+  - term: "kusma"
+    review_required: false
+    category: semptom
+  - term: "ishal"
+    review_required: false
+    category: semptom
+  - term: "konvulziyon"
+    review_required: true
+    category: semptom
+  - term: "febril konvulziyon"
+    review_required: true
+    category: hastalik
+  - term: "otitis media"
+    review_required: true
+    category: hastalik
+  - term: "fizik muayene"
+    review_required: false
+    category: klinik_islem
+  - term: "anne sutuu"
+    review_required: false
+    category: klinik_kavram
+
+video_04_simule_hasta_gorusmesi:
+  - term: "bas agrisi"
+    review_required: false
+    category: semptom
+  - term: "ense tutulmasi"
+    review_required: true
+    category: semptom
+  - term: "tansiyon"
+    review_required: false
+    category: vital
+  - term: "kan basinci"
+    review_required: false
+    category: vital
+  - term: "hipertansiyon"
+    review_required: false
+    category: hastalik
+  - term: "bulanti"
+    review_required: false
+    category: semptom
+  - term: "kusma"
+    review_required: false
+    category: semptom
+  - term: "gorme bozuklugu"
+    review_required: false
+    category: semptom
+  - term: "rontgen"
+    review_required: false
+    category: tani_yontemi
+  - term: "ekg"
+    review_required: false
+    category: tani_yontemi
+
+video_05_poliklinik_anamnez_fizik_muayene:
+  - term: "poliklinik"
+    review_required: false
+    category: saglik_birimi
+  - term: "fizik muayene"
+    review_required: false
+    category: klinik_islem
+  - term: "nefes darligi"
+    review_required: false
+    category: semptom
+  - term: "akcigerler"
+    review_required: false
+    category: anatomik
+  - term: "auskultasyon"
+    review_required: false
+    category: klinik_islem
+  - term: "solunum sesi"
+    review_required: false
+    category: klinik_bulgu
+  - term: "ronkus"
+    review_required: true
+    category: klinik_bulgu
+  - term: "wheeze"
+    review_required: true
+    category: klinik_bulgu
+  - term: "saturasyon"
+    review_required: false
+    category: vital
+  - term: "oksijen saturasyonu"
+    review_required: false
+    category: vital
+  - term: "spo2"
+    review_required: false
+    category: vital
+  - term: "nebul"
+    review_required: true
+    category: tedavi
+
+video_06_gogus_hastaliklari_oyku_alma:
+  - term: "gogus hastaliklari"
+    review_required: false
+    category: uzmanlik
+  - term: "propedetik"
+    review_required: true
+    category: egitim
+  - term: "anamnez"
+    review_required: false
+    category: klinik_islem
+  - term: "oyku alma"
+    review_required: false
+    category: klinik_islem
+  - term: "plevral efuzyon"
+    review_required: true
+    category: hastalik
+  - term: "pnomonit"
+    review_required: true
+    category: hastalik
+  - term: "koah"
+    review_required: false
+    category: hastalik
+  - term: "astim"
+    review_required: false
+    category: hastalik
+  - term: "dispne"
+    review_required: false
+    category: semptom
+  - term: "hemoptizi"
+    review_required: true
+    category: semptom
+  - term: "kanlibalgam"
+    review_required: true
+    category: semptom
+  - term: "oksuruk"
+    review_required: false
+    category: semptom
+  - term: "balgam"
+    review_required: false
+    category: semptom
+  - term: "brons"
+    review_required: false
+    category: anatomik
+  - term: "akciger"
+    review_required: false
+    category: anatomik
+  - term: "soluk boru"
+    review_required: false
+    category: anatomik
+
+saha_01_img_3463:
+  - term: "dogum"
+    review_required: false
+    category: klinik_islem
+  - term: "vajinal dogum"
+    review_required: true
+    category: klinik_islem
+  - term: "resusitasyon"
+    review_required: true
+    category: klinik_islem
+  - term: "yenidogan"
+    review_required: false
+    category: hasta_grubu
+  - term: "hipoksi"
+    review_required: true
+    category: hastalik
+  - term: "ambu"
+    review_required: true
+    category: tibbi_cihaz
+  - term: "entupasyon"
+    review_required: true
+    category: klinik_islem
+
+saha_02_img_3492:
+  - term: "svt"
+    review_required: false
+    category: hastalik
+  - term: "supraventrikuler tasikardi"
+    review_required: true
+    category: hastalik
+  - term: "tasikardi"
+    review_required: false
+    category: hastalik
+  - term: "p dalgasi"
+    review_required: false
+    category: klinik_bulgu
+  - term: "adenozin"
+    review_required: false
+    category: ilac
+  - term: "vagal manevra"
+    review_required: false
+    category: klinik_islem
+  - term: "karotis masaji"
+    review_required: true
+    category: klinik_islem
+  - term: "valsalva"
+    review_required: false
+    category: klinik_islem
+  - term: "damar yolu"
+    review_required: false
+    category: klinik_islem
+  - term: "nabiz"
+    review_required: false
+    category: vital
+
+saha_03_img_3602:
+  - term: "svt"
+    review_required: false
+    category: hastalik
+  - term: "kalp hizi"
+    review_required: false
+    category: vital
+  - term: "adenozin"
+    review_required: false
+    category: ilac
+  - term: "damar yolu"
+    review_required: false
+    category: klinik_islem
+  - term: "buz uygulamasi"
+    review_required: true
+    category: klinik_islem
+  - term: "valsalva"
+    review_required: false
+    category: klinik_islem
+  - term: "karotis masaji"
+    review_required: true
+    category: klinik_islem
+  - term: "kardiyoversiyon"
+    review_required: true
+    category: klinik_islem
+
+saha_04_vid_20220913_142911:
+  - term: "pace"
+    review_required: false
+    category: tibbi_cihaz
+  - term: "pacer"
+    review_required: false
+    category: tibbi_cihaz
+  - term: "pacemaker"
+    review_required: true
+    category: tibbi_cihaz
+  - term: "nabiz"
+    review_required: false
+    category: vital
+  - term: "kalp hizi"
+    review_required: false
+    category: vital
+  - term: "ekg"
+    review_required: false
+    category: tani_yontemi

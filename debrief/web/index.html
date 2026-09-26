@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SimClever Debrief</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, system-ui, sans-serif; background:#0b1020; color:#e8edf7; }
+    * { box-sizing:border-box; }
+    body { margin:0; overflow-x:hidden; }
+    header { padding:24px 5vw; border-bottom:1px solid #28324a; background:#10172a; }
+    header h1 { margin:0 0 6px; font-size:24px; }
+    header p { margin:0; color:#aab6cf; }
+    main { width:100%; max-width:1440px; margin:auto; padding:28px clamp(16px,4vw,56px); display:grid; gap:20px; }
+    .panel { background:#111a2e; border:1px solid #293550; border-radius:14px; padding:20px; }
+    .row { display:flex; flex-wrap:wrap; gap:12px; align-items:end; min-width:0; }
+    .row > button { flex:0 1 190px; min-width:140px; max-width:100%; white-space:normal; }
+    label { display:grid; gap:6px; color:#b9c4da; font-size:13px; flex:1 1 190px; min-width:0; }
+    input,select,textarea,button { border:1px solid #3a496a; border-radius:8px; padding:10px; background:#0d1425; color:#eef3ff; }
+    input,select,textarea { width:100%; min-width:0; max-width:100%; }
+    input[type=file] { overflow:hidden; padding:8px; }
+    .row > * { min-width:0; }
+    textarea { width:100%; min-height:84px; resize:vertical; }
+    button { cursor:pointer; background:#3766d5; border-color:#4876df; font-weight:650; max-width:100%; white-space:normal; overflow-wrap:anywhere; }
+    button.secondary { background:#202c45; }
+    button.approve { background:#176b45; border-color:#2b9b69; }
+    button.reject { background:#752d3a; border-color:#a94a5b; }
+    .index-toolbar { display:flex; flex-wrap:wrap; gap:8px; margin:16px 0; }
+    .index-toolbar button { background:#202c45; padding:8px 12px; }
+    .index-toolbar button.active { background:#3766d5; border-color:#6f95ee; }
+    .event-list { display:grid; gap:10px; }
+    .event-row { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; padding:14px; border:1px solid #293550; border-radius:10px; background:#0e1729; }
+    .event-main { display:grid; gap:8px; min-width:0; }
+    .event-title { font-weight:700; line-height:1.35; overflow-wrap:anywhere; }
+    .event-meta { display:flex; flex-wrap:wrap; gap:8px; align-items:center; color:#aab6cf; font-size:13px; }
+    .event-actions { display:flex; gap:6px; align-items:center; }
+    .event-actions button { padding:7px 10px; }
+    .event-actions button:disabled { opacity:.45; cursor:default; }
+    .empty-events { padding:20px; border:1px dashed #3a496a; border-radius:10px; color:#94a2bf; text-align:center; }
+    .cue-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; }
+    .cue-card { padding:12px; border:1px solid #327b60; border-radius:10px; background:linear-gradient(145deg,#123e31,#0d2d27); }
+    .cue-text { margin-top:8px; color:#edfff5; font-weight:600; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+    .event-cue { padding:9px 11px; border-left:3px solid #3ed08a; border-radius:6px; background:#0e3029; color:#e8fff2; font-size:13px; }
+    h2 { margin-top:0; font-size:18px; }
+    .muted { color:#94a2bf; }
+    #message { min-height:22px; color:#8cd4a6; }
+    #message.error { color:#ff9b9b; }
+    .track { display:grid; grid-template-columns:minmax(180px,1fr) minmax(90px,120px) minmax(90px,110px) minmax(135px,180px) minmax(135px,180px); gap:12px; align-items:center; border-top:1px solid #293550; padding:14px 0; min-width:0; }
+    .track > * { min-width:0; }
+    .track > button { width:100%; height:100%; }
+    .badge { display:inline-block; padding:4px 8px; border-radius:20px; background:#263451; font-size:12px; }
+    video,audio { width:100%; margin-top:12px; }
+    .job-card { margin-top:10px; padding:10px; border:1px solid #3a496a; border-radius:9px; background:#0c1628; }
+    .job-progress { height:9px; margin:8px 0; border-radius:8px; overflow:hidden; background:#202c45; }
+    .job-progress span { display:block; height:100%; background:#20b9ce; transition:width .3s; }
+    .job-card button { padding:6px 10px; margin-left:8px; }
+    .job-note { margin-top:8px; color:#94a2bf; font-size:12px; }
+    @media(max-width:1050px) {
+      .track { grid-template-columns:minmax(0,1fr) 110px 110px; }
+      .track > :nth-child(4) { grid-column:1/2; }
+      .track > :nth-child(5) { grid-column:2/4; }
+    }
+    @media(max-width:760px) {
+      main { padding:18px 14px; }
+      .panel { padding:16px; }
+      .row > label,.row > button { flex-basis:100%; width:100%; }
+      .track { grid-template-columns:1fr; }
+      .track > :nth-child(4),.track > :nth-child(5) { grid-column:auto; }
+      .event-row { grid-template-columns:1fr; }
+      .event-actions { justify-content:flex-start; flex-wrap:wrap; }
+    }
+    :root { --cyan:#13cbd3; --blue:#226fdd; --green:#35b956; --navy:#12224e; --panel:#0f1b30; --line:#2b405d; }
+    body { position:relative; min-height:100vh; isolation:isolate; background:#080f1d; }
+    body:before,body:after { content:""; position:fixed; z-index:-2; width:44vw; height:44vw; min-width:420px; min-height:420px; border-radius:50%; filter:blur(85px); opacity:.18; pointer-events:none; }
+    body:before { left:-14vw; top:-18vw; background:radial-gradient(circle,#17cad5 0,#1666b8 38%,transparent 70%); animation:auroraA 18s ease-in-out infinite alternate; }
+    body:after { right:-17vw; top:12vh; background:radial-gradient(circle,#3fcf67 0,#0a7186 40%,transparent 70%); animation:auroraB 22s ease-in-out infinite alternate; }
+    header { position:sticky; top:0; z-index:30; padding:0 5vw; background:#071321e8;
+      backdrop-filter:blur(18px); box-shadow:0 10px 35px #0005; }
+    .header-inner { max-width:1440px; min-height:82px; margin:auto; display:flex; align-items:center; gap:15px; }
+    .brand-logo { width:178px; height:54px; padding:5px 10px; object-fit:contain; border-radius:12px; background:#fff; box-shadow:0 0 0 1px #ffffff20,0 10px 30px #0004; animation:brandIn .65s ease-out both; }
+    .brand-separator { width:1px; height:38px; background:linear-gradient(transparent,#3f6577,transparent); }
+    .header-copy { min-width:0; }
+    .header-copy h1 { margin-bottom:5px;font-size:clamp(20px,2vw,27px);font-weight:850;line-height:1.05;letter-spacing:-.035em;background:linear-gradient(90deg,#f5fbff 5%,#50dce0 52%,#65cf78);background-size:180% 100%;-webkit-background-clip:text;color:transparent;animation:titleGlow 8s ease-in-out infinite alternate; }
+    .header-copy p { font-size:13px;letter-spacing:.012em; }
+    .header-actions { margin-left:auto; display:flex; gap:10px; align-items:center; }
+    .phase-link { position:relative;overflow:hidden;text-decoration:none;color:#f5fbff;font-weight:750;padding:10px 15px;border-radius:10px;border:1px solid #2d8bd0;background:linear-gradient(135deg,#12629d,#245ddd 56%,#169873);white-space:nowrap;box-shadow:0 9px 26px #12629d44;transition:transform .18s,filter .18s; }
+    .phase-link:after { content:"";position:absolute;inset:-40% auto -40% -35%;width:24%;transform:rotate(18deg);background:#fff3;animation:buttonSweep 5s ease-in-out infinite; }
+    .phase-link:hover { transform:translateY(-2px);filter:brightness(1.14); }
+    main { padding-top:24px; }
+    .panel { position:relative; overflow:hidden; border-color:#263d5d; background:linear-gradient(145deg,#111f35,#0d1729);
+      box-shadow:0 16px 45px #0003; transition:transform .18s,border-color .18s; animation:panelIn .45s ease-out both; }
+    .panel:nth-of-type(2){animation-delay:.06s}.panel:nth-of-type(3){animation-delay:.12s}.panel:nth-of-type(4){animation-delay:.18s}
+    .panel:before { content:""; position:absolute; inset:0 auto 0 0; width:3px; background:linear-gradient(var(--cyan),var(--green),var(--blue)); opacity:.8; }
+    .panel:hover { border-color:#357d8c; transform:translateY(-2px);box-shadow:0 20px 52px #0004,0 0 0 1px #20c7c51a; }
+    .panel h2 { display:flex; align-items:center; gap:9px; letter-spacing:-.025em;font-weight:820;color:#f4fbff; }
+    .panel h2:after { content:"";height:1px;flex:1;max-width:90px;background:linear-gradient(90deg,#18c9d8aa,transparent); }
+    input,select,textarea { transition:border-color .18s,box-shadow .18s; }
+    input:focus,select:focus,textarea:focus { outline:none; border-color:var(--cyan); box-shadow:0 0 0 3px #18c9d822; }
+    button { position:relative;min-height:42px;transition:transform .15s,filter .15s,border-color .15s,box-shadow .15s;box-shadow:0 6px 16px #0002; }
+    button:hover:not(:disabled) { transform:translateY(-1px); filter:brightness(1.1); }
+    .event-row,.cue-card,.job-card { box-shadow:0 8px 24px #0002; }
+    @keyframes brandIn{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:none}}@keyframes panelIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes auroraA{to{transform:translate(12vw,14vh) scale(1.18)}}@keyframes auroraB{to{transform:translate(-10vw,18vh) scale(.88)}}@keyframes titleGlow{to{background-position:100% 0}}@keyframes buttonSweep{0%,70%{left:-35%}90%,100%{left:125%}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+    @media(max-width:760px) { .header-inner{min-height:70px}.header-copy p{display:none}.phase-link{padding:9px 11px;font-size:13px}.brand-logo{width:132px;height:43px}.brand-separator{display:none} }
+    html{-webkit-font-smoothing:auto;text-rendering:optimizeLegibility;font-synthesis:none}.panel,.event-row,.cue-card,.job-card{transform:none;text-shadow:none}.brand-logo{flex:0 0 auto}.header-copy h1{font-weight:850}.muted{color:#a9bad2}
+  </style>
+</head>
+<body>
+<header><div class="header-inner">
+  <img class="brand-logo" src="/brand/simclever-logo.png" alt="SimClever">
+  <span class="brand-separator" aria-hidden="true"></span>
+  <div class="header-copy"><h1>SimClever Debrief</h1><p>Oturum hazırlama · medya, yapay zekâ analizi ve eğitmen notları</p></div>
+  <div class="header-actions"><a class="phase-link" href="/phase2">Debrief çalışma alanı →</a></div>
+</div></header>
+<main>
+  <section class="panel">
+    <h2>1. Oturum</h2>
+    <div class="row">
+      <label>Yeni oturum başlığı<input id="sessionTitle" placeholder="Örn. Simülasyon Eğitimi 01"></label>
+      <label>Gizlilik<select id="privacyMode"><option value="yalnız_yerel">Yalnız yerel (varsayılan)</option><option value="bulut_izinli">Bulut izinli</option></select></label>
+      <button id="createSession">Oturum oluştur</button>
+      <label>Aktif oturum<select id="sessionSelect"><option value="">Oturum seçin</option></select></label>
+      <button class="secondary" id="refresh">Yenile</button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>2. Medya kanalı yükle</h2>
+    <div class="row">
+      <label>Kanal adı<input id="trackName" placeholder="Kamera A / Öğrenci sesi"></label>
+      <label>Kanal türü<select id="trackType"><option value="video">Video</option><option value="ses">Ses</option></select></label>
+      <label>Oda/kaynak<input id="room" placeholder="Öğrenci odası 1"></label>
+      <label>Dosya<input id="file" type="file" accept="video/*,audio/*"></label>
+      <button id="upload">Yükle ve analiz et</button>
+    </div>
+    <p class="muted">Dosya yalnız bu bilgisayarda saklanır. Buluta gönderilmez.</p>
+    <div id="message"></div>
+  </section>
+
+  <section class="panel">
+    <h2>3. Eğitmen notu ekle</h2>
+    <p class="muted">Eğitmenin yazdığı not doğrudan onaylı bookmark olarak kaydedilir; ASR veya LLM kullanılmaz.</p>
+    <div class="row">
+      <label>Eğitmen adı<input id="instructorName" value="Eğitmen"></label>
+      <label>Olay zamanı (sn)<input id="noteTime" type="number" min="0" step="0.01" value="0"></label>
+      <label style="flex:3">Not<textarea id="instructorNote" placeholder="Örn. Öğrenci hastanın alerji öyküsünü sormayı atladı."></textarea></label>
+      <button id="addInstructorNote">Notu bookmark olarak ekle</button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>4. Kanallar ve senkron offset</h2>
+    <div class="row" style="margin-bottom:12px">
+      <button class="secondary" id="showSessionEvents">Birleşik zaman çizelgesini göster</button>
+    </div>
+    <div id="tracks" class="muted">Önce bir oturum seçin.</div>
+    <div id="player"></div>
+  </section>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const api = '/api/v1';
+let currentIndexResult = {chapters:[], events:[]};
+let eventFilter = 'all';
+const watchedJobs = new Set();
+
+function message(text, error=false) {
+  $('message').textContent = text;
+  $('message').className = error ? 'error' : '';
+}
+async function json(response) {
+  const contentType=response.headers.get('content-type') || '';
+  const data=contentType.includes('application/json') ? await response.json() : {detail:await response.text() || `HTTP ${response.status}`};
+  if (!response.ok) throw new Error(data.detail || 'İşlem başarısız');
+  return data;
+}
+async function loadSessions(selected) {
+  const sessions = await json(await fetch(`${api}/sessions`));
+  $('sessionSelect').innerHTML = '<option value="">Oturum seçin</option>' + sessions.map(s => `<option value="${s.id}">${escapeHtml(s.title)} · ${s.privacy_mode}</option>`).join('');
+  if (selected) $('sessionSelect').value = selected;
+  await loadTracks();
+}
+async function loadTracks() {
+  const sessionId = $('sessionSelect').value;
+  if (!sessionId) { $('tracks').textContent='Önce bir oturum seçin.'; $('player').innerHTML=''; return; }
+  const tracks = await json(await fetch(`${api}/sessions/${sessionId}/tracks`));
+  $('tracks').innerHTML = tracks.length ? tracks.map(t => `
+    <div class="track">
+      <div><strong>${escapeHtml(t.name)}</strong><br><span class="badge">${t.type}</span> <span class="muted">${escapeHtml(t.codec_name || '')}</span></div>
+      <div>${t.duration_ms == null ? '—' : (t.duration_ms/1000).toFixed(2)+' sn'}</div>
+      ${t.type==='not' && !t.media_path ? '<span class="muted">Manuel zaman damgası</span>' : `<input type="number" value="${t.offset_ms}" aria-label="Offset milisaniye" id="offset-${t.id}">`}
+      ${t.type==='not' && !t.media_path ? '<span></span>' : `<button class="secondary" onclick="saveOffset('${t.id}')">Offset kaydet</button>`}
+      ${t.type==='ses' || (t.type==='not' && t.media_path) ? `<button onclick="transcribe('${t.id}')">ASR ipuçları oluştur</button>` : (t.type === 'transkript' ? `<button onclick="createIndex('${t.id}')">İndeks oluştur</button>` : (t.type === 'indeks' ? `<button class="secondary" onclick="showSessionEvents()">Birleşik olayları göster</button>` : '<span></span>'))}
+    </div>`).join('') : '<span class="muted">Henüz kanal yok.</span>';
+  const playable = tracks.filter(t => ['video','ses','not'].includes(t.type) && t.media_path);
+  $('player').innerHTML = playable.map(t => t.type === 'video'
+    ? `<video class="synced-media" data-offset-ms="${t.offset_ms}" controls src="${api}/tracks/${t.id}/media"></video>`
+    : `<audio class="synced-media" data-offset-ms="${t.offset_ms}" controls src="${api}/tracks/${t.id}/media"></audio>`).join('');
+  restoreSessionJob(sessionId).catch(e=>message(e.message,true));
+}
+async function restoreSessionJob(sessionId) {
+  const jobs=await json(await fetch(`${api}/sessions/${sessionId}/jobs`));
+  const active=jobs.find(job=>['kuyrukta','çalışıyor','iptal_istendi'].includes(job.status));
+  if(!active) return;
+  const label=active.kind==='asr'?'ASR':active.kind==='index'?'İndeks':'Timeline görselleri';
+  renderJob(active,label);
+  if(watchedJobs.has(active.id)) return;
+  watchedJobs.add(active.id);
+  waitJob(active.id,label).then(async result=>{
+    watchedJobs.delete(active.id);
+    await loadTracks();
+    if(result?.segments) showTranscript(result.segments);
+    if(result?.events) await showSessionEvents();
+    message(`${label} tamamlandı.`);
+  }).catch(error=>{
+    watchedJobs.delete(active.id);
+    message(error.message,true);
+  });
+}
+async function saveOffset(trackId) {
+  try {
+    await json(await fetch(`${api}/tracks/${trackId}/offset`, {method:'PATCH', headers:{'Content-Type':'application/json'}, body:JSON.stringify({offset_ms:Number($(`offset-${trackId}`).value)})}));
+    message('Offset kaydedildi.');
+  } catch(e) { message(e.message, true); }
+}
+async function transcribe(trackId) {
+  try {
+    message('ASR işi kuyruğa alındı; sayfa kullanılmaya devam edilebilir…');
+    const job=await json(await fetch(`${api}/tracks/${trackId}/jobs/asr`, {method:'POST'}));
+    const result=await waitJob(job.id,'ASR');
+    await loadTracks(); showTranscript(result.segments); message(`${result.segments.length} zaman damgalı dahili ASR segmenti oluşturuldu; kullanıcıya cue önizlemesi gösteriliyor.`);
+  } catch(e) { message(e.message, true); }
+}
+async function waitJob(jobId,label) {
+  while(true) {
+    const job=await json(await fetch(`${api}/jobs/${jobId}`));
+    renderJob(job,label);
+    if(job.status==='tamamlandı') return job.result;
+    if(job.status==='hatalı') throw new Error(job.error||`${label} tamamlanamadı; yeniden dene düğmesini kullanabilirsiniz`);
+    if(job.status==='iptal_edildi') throw new Error(`${label} iptal edildi`);
+    await new Promise(resolve=>setTimeout(resolve,1500));
+  }
+}
+function renderJob(job,label) {
+  const active=['kuyrukta','çalışıyor','iptal_istendi'].includes(job.status);
+  const retry=['hatalı','iptal_edildi'].includes(job.status);
+  const statusLabels={kuyrukta:'Kuyrukta',çalışıyor:'Çalışıyor',iptal_istendi:'İptal bekleniyor',iptal_edildi:'İptal edildi',tamamlandı:'Tamamlandı',hatalı:'Hata'};
+  const resume=job.resume_available ? `<div class="job-note">Ara kayıt hazır · ${job.completed_units} bölüm tamamlandı${job.checkpoint_model?` · ${escapeHtml(job.checkpoint_model)}`:''}</div>` : '';
+  const persistence=active ? '<div class="job-note">Bu iş arka planda sürer; sayfayı yenilemeniz işlemi durdurmaz.</div>' : '';
+  $('message').className=job.status==='hatalı'?'error':'';
+  $('message').innerHTML=`<div class="job-card"><strong>${escapeHtml(label)} · ${escapeHtml(statusLabels[job.status]||job.status)}</strong><span class="muted"> · deneme ${job.attempt_count}/${job.max_attempts}</span><div>${escapeHtml(job.stage||'Bekleniyor')}</div><div class="job-progress"><span style="width:${job.progress}%"></span></div><span>%${job.progress}</span>${active?`<button class="reject" onclick="cancelJob('${job.id}')">İptal et</button>`:''}${retry?`<button onclick="retryJob('${job.id}','${escapeHtml(label)}')">Yeniden dene</button>`:''}${resume}${persistence}</div>`;
+}
+async function cancelJob(jobId) {
+  try { const job=await json(await fetch(`${api}/jobs/${jobId}/cancel`,{method:'POST'})); renderJob(job,'İş'); }
+  catch(e) { message(e.message,true); }
+}
+async function retryJob(jobId,label) {
+  try {
+    const job=await json(await fetch(`${api}/jobs/${jobId}/retry`,{method:'POST'}));
+    const result=await waitJob(job.id,label);
+    await loadTracks();
+    if(result?.segments) showTranscript(result.segments);
+    if(result?.events) await showSessionEvents();
+    message(`${label} yeniden denemede tamamlandı.`);
+  } catch(e) { message(e.message,true); }
+}
+async function showSegments(trackId) {
+  try { showTranscript(await json(await fetch(`${api}/tracks/${trackId}/segments`))); }
+  catch(e) { message(e.message, true); }
+}
+function showTranscript(segments) {
+  const limit=8;
+  const samples=segments.length<=limit ? segments : Array.from({length:limit},(_,i)=>segments[Math.round(i*(segments.length-1)/(limit-1))]);
+  $('player').innerHTML += `<div class="panel"><h3>ASR ipucu önizlemesi</h3><p class="muted">Bunlar güvenilir tam transkript veya nihai sonuç değildir. Yalnız ilgili konuşma anını bulmaya yardımcı olan otomatik ASR cue bloklarıdır.</p><div class="cue-grid">${samples.map(s=>`<div class="cue-card"><span class="badge">${s.segment_ref}</span> ${(s.start_ms/1000).toFixed(2)}–${(s.end_ms/1000).toFixed(2)} sn<div class="cue-text">${escapeHtml(s.text)}</div></div>`).join('')}</div></div>`;
+}
+async function createIndex(trackId) {
+  try { message('İndeks işi kuyruğa alındı…'); const job=await json(await fetch(`${api}/tracks/${trackId}/jobs/index`,{method:'POST'})); const result=await waitJob(job.id,'İndeks'); await loadTracks(); await showSessionEvents(); message(`${result.events.length} olay önerisi oluşturuldu; birleşik zaman çizelgesine eklendi.`); }
+  catch(e) { message(e.message,true); }
+}
+async function showSessionEvents() {
+  try {
+    const sessionId=$('sessionSelect').value;
+    if(!sessionId) throw new Error('Önce oturum seçin.');
+    const events=await json(await fetch(`${api}/sessions/${sessionId}/events`));
+    showIndex({chapters:[],events});
+  } catch(e) { message(e.message,true); }
+}
+async function showEvents(trackId) {
+  try { showIndex({chapters:[],events:await json(await fetch(`${api}/tracks/${trackId}/events`))}); }
+  catch(e) { message(e.message,true); }
+}
+function showIndex(result) {
+  currentIndexResult={chapters:result.chapters||[],events:result.events||[]};
+  eventFilter='all';
+  document.getElementById('index-panel')?.remove();
+  $('player').insertAdjacentHTML('beforeend','<div class="panel" id="index-panel"></div>');
+  renderIndexPanel();
+}
+function renderIndexPanel() {
+  const panel=$('index-panel'); if(!panel) return;
+  const counts={all:currentIndexResult.events.length,'öneri':0,'onaylı':0,'reddedildi':0};
+  currentIndexResult.events.forEach(e=>{ if(counts[e.status]!==undefined) counts[e.status]++; });
+  const filters=[['all','Tümü'],['öneri','Öneriler'],['onaylı','Onaylananlar'],['reddedildi','Reddedilenler']];
+  const visible=eventFilter==='all' ? currentIndexResult.events : currentIndexResult.events.filter(e=>e.status===eventFilter);
+  const chapters=currentIndexResult.chapters.map(c=>`<p><strong>${escapeHtml(c.title)}</strong> ${(c.start_ms/1000).toFixed(2)}–${(c.end_ms/1000).toFixed(2)} sn</p>`).join('');
+  const toolbar=filters.map(([key,label])=>`<button class="${eventFilter===key?'active':''}" onclick="setEventFilter('${key}')">${label} (${counts[key]})</button>`).join('');
+  panel.innerHTML=`<h3>Birleşik zaman çizelgesi ve manuel doğrulama</h3><p class="muted">LLM önerileri ve eğitmen bookmark'ları bütün kanallardan zaman sırasıyla birlikte gösterilir. Nihai indeks, onaylanan olaylardan oluşur.</p>${chapters}<div class="index-toolbar">${toolbar}</div><div class="event-list">${visible.length?visible.map(renderEvent).join(''):'<div class="empty-events">Bu filtrede olay bulunmuyor.</div>'}</div>`;
+}
+function setEventFilter(filter) {
+  eventFilter=filter;
+  renderIndexPanel();
+}
+function renderEvent(e) {
+  const actions=`<span class="event-actions"><button class="approve" onclick="reviewEvent('${e.id}','onaylı')" ${e.status==='onaylı'?'disabled':''}>Kabul et</button><button class="reject" onclick="reviewEvent('${e.id}','reddedildi')" ${e.status==='reddedildi'?'disabled':''}>Reddet</button></span>`;
+  const cue=e.asr_cue ? `<div class="event-cue"><strong>ASR cue · ${escapeHtml(e.source_segment_ref||'')}</strong><br>${escapeHtml(e.asr_cue)}</div>` : '';
+  return `<div class="event-row" id="event-${e.id}"><div class="event-main"><div class="event-title">${escapeHtml(e.title)}</div><div class="event-meta"><span class="badge">${escapeHtml(e.category)}</span><span class="badge">${escapeHtml(e.status)}</span><span>Kaynak: ${escapeHtml(e.source||'bilinmiyor')}</span>${e.track_name?`<span>Kanal: ${escapeHtml(e.track_name)}</span>`:''}<span>Olay: ${(e.event_time_ms/1000).toFixed(2)} sn</span><span>Başlangıç: ${(e.playback_time_ms/1000).toFixed(2)} sn</span><button onclick="seekAll(${e.playback_time_ms})">Videoda aç</button></div>${cue}</div>${actions}</div>`;
+}
+async function reviewEvent(eventId, status) {
+  try {
+    const event=await json(await fetch(`${api}/events/${eventId}/review`, {method:'PATCH',headers:{'Content-Type':'application/json'},body:JSON.stringify({status,reviewed_by:'yerel_kullanici'})}));
+    const index=currentIndexResult.events.findIndex(item=>item.id===eventId); if(index>=0) currentIndexResult.events[index]=event;
+    renderIndexPanel();
+    message(status==='onaylı' ? 'Olay kabul edildi ve denetim kaydı oluşturuldu.' : 'Olay reddedildi ve denetim kaydı oluşturuldu.');
+  } catch(e) { message(e.message,true); }
+}
+function seekAll(milliseconds) {
+  document.querySelectorAll('.synced-media').forEach(media => {
+    media.pause();
+    const offset=Number(media.dataset.offsetMs || 0);
+    const localSeconds=Math.max(0, (milliseconds - offset) / 1000);
+    const applySeek=()=>{ media.currentTime=Math.min(localSeconds, Number.isFinite(media.duration) ? media.duration : localSeconds); };
+    if(media.readyState === 0) media.addEventListener('loadedmetadata', applySeek, {once:true});
+    else applySeek();
+  });
+  message(`Tüm medya kanalları ${(milliseconds/1000).toFixed(2)} saniyeye konumlandırıldı. Oynatmak için videonun başlat düğmesine basın.`);
+}
+function escapeHtml(value) { const d=document.createElement('div'); d.textContent=value; return d.innerHTML; }
+
+$('createSession').onclick = async () => {
+  try {
+    const title=$('sessionTitle').value.trim(); if(!title) throw new Error('Oturum başlığı girin.');
+    const privacy_mode=$('privacyMode').value;
+    const session=await json(await fetch(`${api}/sessions`, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({title,privacy_mode})}));
+    $('sessionTitle').value=''; await loadSessions(session.id);
+    message(privacy_mode === 'bulut_izinli' ? 'Bulut izinli test oturumu oluşturuldu.' : 'Yalnız yerel oturum oluşturuldu.');
+  } catch(e) { message(e.message, true); }
+};
+$('upload').onclick = async () => {
+  try {
+    const sessionId=$('sessionSelect').value, file=$('file').files[0], name=$('trackName').value.trim();
+    if(!sessionId) throw new Error('Önce oturum seçin.'); if(!file) throw new Error('Dosya seçin.'); if(!name) throw new Error('Kanal adı girin.');
+    message('Dosya yükleniyor ve FFprobe ile analiz ediliyor…');
+    const response=await fetch(`${api}/sessions/${sessionId}/media`, {method:'POST', headers:{'Content-Type':file.type || 'application/octet-stream','X-Filename':encodeURIComponent(file.name),'X-Track-Name':encodeURIComponent(name),'X-Track-Type':$('trackType').value,'X-Room':encodeURIComponent($('room').value.trim())}, body:file});
+    await json(response); $('file').value=''; await loadTracks(); message('Kanal yüklendi ve analiz edildi.');
+  } catch(e) { message(e.message, true); }
+};
+$('addInstructorNote').onclick = async () => {
+  try {
+    const sessionId=$('sessionSelect').value;
+    const text=$('instructorNote').value.trim();
+    const instructor_name=$('instructorName').value.trim();
+    const seconds=Number($('noteTime').value);
+    if(!sessionId) throw new Error('Önce oturum seçin.');
+    if(!text) throw new Error('Eğitmen notunu yazın.');
+    if(!instructor_name) throw new Error('Eğitmen adını yazın.');
+    if(!Number.isFinite(seconds) || seconds < 0) throw new Error('Geçerli bir olay zamanı girin.');
+    const result=await json(await fetch(`${api}/sessions/${sessionId}/instructor-notes`, {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({text,event_time_ms:Math.round(seconds*1000),instructor_name})
+    }));
+    $('instructorNote').value='';
+    await loadTracks();
+    await showSessionEvents();
+    message('Yazılı eğitmen notu doğrudan onaylı bookmark olarak kaydedildi.');
+  } catch(e) { message(e.message,true); }
+};
+$('showSessionEvents').onclick=showSessionEvents;
+$('sessionSelect').onchange=loadTracks; $('refresh').onclick=()=>loadSessions($('sessionSelect').value);
+loadSessions().catch(e=>message(e.message,true));
+</script>
+</body>
+</html>

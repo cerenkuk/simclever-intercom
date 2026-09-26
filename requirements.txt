@@ -1,0 +1,29 @@
+# SimClever Intercom - Paket 1 Bağımlılıkları
+# Tüm kütüphaneler ticari kullanıma uygun (MIT, BSD, Apache-2.0) lisanslıdır.
+
+# Ses Giriş / Çıkış ve Dosya İşlemleri
+sounddevice>=0.4.6          # MIT - Ses kartı erişimi (kayıt/oynatma)
+soundfile>=0.12.1           # BSD-3-Clause - WAV dosyası okuma/yazma
+numpy>=1.20.0               # BSD-3-Clause - Ses verisi manipülasyonu ve matematiksel işlemler
+
+# Kodek (Ses Sıkıştırma)
+opuslib-next>=1.3.0         # BSD-3-Clause - Python Opus bağlayıcısı
+
+# AEC / VAD (Ses İşleme)
+pywebrtc-audio>=0.1.0       # Apache-2.0 - WebRTC AEC3, NS, AGC
+pyaec>=0.1.0                # Apache-2.0 - SpeexDSP AEC Rust/C wrapper
+webrtcvad-wheels>=2.0.10     # MIT - WebRTC Voice Activity Detection (Windows/3.13 uyumlu)
+numba>=0.66.0                # MIT / BSD - JIT derleme ile yerli NLMS AEC hızlandırma
+onnxruntime>=1.15.0          # MIT - Silero VAD (Derin Öğrenme) çalıştırmak için
+
+# Taşıma Katmanı (Ağ)
+aiortc>=1.5.0               # BSD-3-Clause - WebRTC taşıma katmanı ve tümleşik Opus
+pyzmq>=25.0.0               # BSD-3-Clause - ZeroMQ soket ve mesaj kuyruğu yönetimi
+
+# Ölçüm ve Analiz
+matplotlib>=3.5.0           # PSF - Drift ve performans grafiklerini çizmek için
+psutil>=5.9.0               # BSD-3-Clause - CPU ve RAM tüketimi takibi
+scipy>=1.8.0                # BSD-3-Clause - Çapraz korelasyon (cross-correlation) hesaplamaları için
+
+# Ticari Bulut API Entegrasyonu (Paket 3)
+google-genai>=0.1.0         # Apache-2.0 - Resmî Google GenAI SDK (Gemini API)

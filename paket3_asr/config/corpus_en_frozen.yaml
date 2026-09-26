@@ -1,0 +1,183 @@
+# Ingilizce korpus — DONDURULMUS kayit listesi
+# Ek-2 Rev B, Bolum 4 Kural 1. Bu dosya bir daha degistirilmez.
+# Uretim: freeze_corpus_en.py
+
+window_rule: "AMI: ilk konusmadan itibaren 10 dakika (Bolum 4); degistirilmedi"
+sample_rate: 16000
+cells:
+  - id: en_clean_medical
+    source: "PriMock57"
+    license: "CC BY 4.0"
+    records:
+      - id: day1_consultation01
+        duration_s: 457.92
+        ref_words: 1436
+        sha256: 48ccd938eba04fff0399f6b32e00d19a47ad84bec8781d26896166859277f1f9
+      - id: day1_consultation02
+        duration_s: 559.20
+        ref_words: 1680
+        sha256: 71e345415e1d5d6c9916cf6b7c5330c6d50cd33857c4f009909df987c947e87c
+      - id: day1_consultation03
+        duration_s: 544.32
+        ref_words: 1569
+        sha256: 0b39715333dabc6aef8dfdd9b5cddc3c49b4bd651d7bdacb183c7476874b8135
+      - id: day1_consultation04
+        duration_s: 615.48
+        ref_words: 1691
+        sha256: e9ff79009fb3deab1bb174bd230ca84a8233a3595cb314f586f718cc7091b215
+      - id: day1_consultation05
+        duration_s: 577.02
+        ref_words: 1654
+        sha256: b29881ce53c0b84cf18f030920efb76185bbb947b1d404d17fd268e6e1f22556
+      - id: day1_consultation06
+        duration_s: 662.52
+        ref_words: 1879
+        sha256: 7483d853dbf236bde2661f656088e0d4924181dec053db6285dce33f62e3f68e
+      - id: day1_consultation07
+        duration_s: 858.24
+        ref_words: 2833
+        sha256: 83c5539cc338474aa31b1c176bb9e1638553867a1944f17540744e48d4117682
+      - id: day1_consultation08
+        duration_s: 466.20
+        ref_words: 1220
+        sha256: 5b1e73947f1b193fb9c0465f85f453158d7076d7ebb407d687e42defa4f37020
+      - id: day1_consultation09
+        duration_s: 536.82
+        ref_words: 1624
+        sha256: cef793e3a969cfd62c6a8cf15ffe87b6f986f867662eb12cbd6c85d7a8dd439f
+      - id: day1_consultation10
+        duration_s: 620.34
+        ref_words: 1908
+        sha256: 5663997c2722fb2d20ab1310e7c7c6e755d70b1b183724dac26237bed8d29867
+
+  - id: en_noisy_sdm
+    source: "AMI (Array1-01, tek uzak mikrofon)"
+    license: "CC BY 4.0"
+    records:
+      - id: EN2002a_sdm
+        duration_s: 600.00
+        ref_words: 2186
+        sha256: c5aad1a4108ec16a8e3ed72d58c2861d5af17342f122aab1619565e3338b367d
+        window_s: [0.37, 600.37]
+        transcript_coverage_pct: 122.2
+      - id: EN2002b_sdm
+        duration_s: 600.00
+        ref_words: 1854
+        sha256: 103464407703a316b2d625874e52394f4d90068929acb04920378e77ae76c0cc
+        window_s: [4.48, 604.48]
+        transcript_coverage_pct: 119.0
+      - id: EN2002c_sdm
+        duration_s: 600.00
+        ref_words: 2022
+        sha256: ae3dce99911e79240322e2837cf5fab654a0fe99e1eb2122e23468c391bdf516
+        window_s: [20.66, 620.66]
+        transcript_coverage_pct: 103.6
+      - id: EN2002d_sdm
+        duration_s: 600.00
+        ref_words: 2240
+        sha256: c0ab1e7a868704f0542e80747f4008f8db8f5f11d26a9d1ea7d171118918be09
+        window_s: [20.63, 620.63]
+        transcript_coverage_pct: 127.6
+      - id: ES2004a_sdm
+        duration_s: 600.00
+        ref_words: 1115
+        sha256: 57c5a5e0fb8a1fe555edb5f32abeb8278c6642339fd068d5d30f8af816f9caa7
+        window_s: [0.37, 600.37]
+        transcript_coverage_pct: 72.5
+      - id: ES2004b_sdm
+        duration_s: 600.00
+        ref_words: 1270
+        sha256: 00a89564c99578b052eda2c45794448d409e90120c558c28c21dcc7174f9b45c
+        window_s: [0.20, 600.20]
+        transcript_coverage_pct: 76.9
+      - id: ES2004c_sdm
+        duration_s: 600.00
+        ref_words: 1378
+        sha256: ccbeea085a1b9f482e41c6377fc7ac4219684111b7a155cf1ab7d6dfadcc0ac6
+        window_s: [0.02, 600.02]
+        transcript_coverage_pct: 81.1
+      - id: ES2004d_sdm
+        duration_s: 600.00
+        ref_words: 1629
+        sha256: bf6c724d4649e82fb4c40808433b7397c26f8e116ffb8ba02c94d223f3cb49bd
+        window_s: [3.68, 603.68]
+        transcript_coverage_pct: 96.5
+      - id: IS1009a_sdm
+        duration_s: 600.00
+        ref_words: 1544
+        sha256: 1661ef0f64cbebb1d098c0116a2d0de83e2de74b7417145b4e028cd825f4b68d
+        window_s: [54.95, 654.95]
+        transcript_coverage_pct: 93.3
+      - id: IS1009b_sdm
+        duration_s: 600.00
+        ref_words: 1763
+        sha256: 6c9ea1e8ff0277eb615d82c7a45564a55bf4ea6890cff8307dd870ca8a6b4112
+        window_s: [37.32, 637.32]
+        transcript_coverage_pct: 93.7
+
+  - id: en_clean_ihm
+    source: "AMI (Headset-0..3 karisimi)"
+    license: "CC BY 4.0"
+    records:
+      - id: EN2002a_ihm
+        duration_s: 600.00
+        ref_words: 2186
+        sha256: ded1eea09a82a4553830283f0d0c72ab1dbafd51fd7ac0c045a4aba559095180
+        window_s: [0.37, 600.37]
+        transcript_coverage_pct: 122.2
+      - id: EN2002b_ihm
+        duration_s: 600.00
+        ref_words: 1854
+        sha256: b4461e06f747f139f27c33cce0a4b1f66b1ed9bbe06378f46edcc99c3cc3f9c1
+        window_s: [4.48, 604.48]
+        transcript_coverage_pct: 119.0
+      - id: EN2002c_ihm
+        duration_s: 600.00
+        ref_words: 2022
+        sha256: bf482adc4761a6b0068058cf371a6623ba2a56ff367c65b6caf6792eb558c889
+        window_s: [20.66, 620.66]
+        transcript_coverage_pct: 103.6
+      - id: EN2002d_ihm
+        duration_s: 600.00
+        ref_words: 2240
+        sha256: a9048078a97dc420257ff2c2f8ca6c86752204cc2994a3d85b086899028d7876
+        window_s: [20.63, 620.63]
+        transcript_coverage_pct: 127.6
+      - id: ES2004a_ihm
+        duration_s: 600.00
+        ref_words: 1115
+        sha256: d515876e89939a8f5687242fc72677a1b112cc31a6cd70aadffcae950f691e9c
+        window_s: [0.37, 600.37]
+        transcript_coverage_pct: 72.5
+      - id: ES2004b_ihm
+        duration_s: 600.00
+        ref_words: 1270
+        sha256: 5aeccfa5a1301ed9c11858783fc8095e404b489260b3825644422a6c29e84106
+        window_s: [0.20, 600.20]
+        transcript_coverage_pct: 76.9
+      - id: ES2004c_ihm
+        duration_s: 600.00
+        ref_words: 1378
+        sha256: aab753262062c085275795e4471315cb1bc4f02394a9c27329750ac1851e597a
+        window_s: [0.02, 600.02]
+        transcript_coverage_pct: 81.1
+      - id: ES2004d_ihm
+        duration_s: 600.00
+        ref_words: 1629
+        sha256: 416061ad75508ff866f343006370a5d70b8a8661e16e2d222089bc7bfef7cd2f
+        window_s: [3.68, 603.68]
+        transcript_coverage_pct: 96.5
+      - id: IS1009a_ihm
+        duration_s: 600.00
+        ref_words: 1544
+        sha256: 9eb1330e1ac1b480ffc85d4e728abd54ac181ee10f6d4d002d904cfb478179ef
+        window_s: [54.95, 654.95]
+        transcript_coverage_pct: 93.3
+      - id: IS1009b_ihm
+        duration_s: 600.00
+        ref_words: 1763
+        sha256: cedcbe2c0df4250af4af7b224e2d98a735ae5072c3c0461f91cc69d9b257c689
+        window_s: [37.32, 637.32]
+        transcript_coverage_pct: 93.7
+
+# toplam: 30 kayit, 4.97 saat

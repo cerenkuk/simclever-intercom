@@ -1,0 +1,13 @@
+.git
+.pytest_cache
+.test-tmp*
+__pycache__
+*.pyc
+debrief.local.db
+debrief-media
+models
+benchmark-results
+build*
+dist*
+release_dist
+.venv*

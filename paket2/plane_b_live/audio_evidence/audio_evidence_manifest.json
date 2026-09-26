@@ -1,0 +1,212 @@
+[
+  {
+    "noise_type": "device_alarm",
+    "method": "none",
+    "label": "Ham Ses",
+    "file": "device_alarm\\device_alarm_none.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "device_alarm",
+    "method": "wiener",
+    "label": "Adaptif Wiener Filtresi (SIFIR YUTULMA)",
+    "file": "device_alarm\\device_alarm_wiener.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "device_alarm",
+    "method": "pretrigger_gate",
+    "label": "Pre-Trigger 50ms Gate (SIFIR KIRPILMA)",
+    "file": "device_alarm\\device_alarm_pretrigger_gate.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "device_alarm",
+    "method": "baseline",
+    "label": "Spektral Çıkarma",
+    "file": "device_alarm\\device_alarm_baseline.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "device_alarm",
+    "method": "webrtc_mild",
+    "label": "WebRTC NS Mild (level=1)",
+    "file": "device_alarm\\device_alarm_webrtc_mild.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "device_alarm",
+    "method": "webrtc_aggressive",
+    "label": "WebRTC NS Aggressive (level=2)",
+    "file": "device_alarm\\device_alarm_webrtc_aggressive.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "static_noise",
+    "method": "none",
+    "label": "Ham Ses",
+    "file": "static_noise\\static_noise_none.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "static_noise",
+    "method": "wiener",
+    "label": "Adaptif Wiener Filtresi (SIFIR YUTULMA)",
+    "file": "static_noise\\static_noise_wiener.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "static_noise",
+    "method": "pretrigger_gate",
+    "label": "Pre-Trigger 50ms Gate (SIFIR KIRPILMA)",
+    "file": "static_noise\\static_noise_pretrigger_gate.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "static_noise",
+    "method": "baseline",
+    "label": "Spektral Çıkarma",
+    "file": "static_noise\\static_noise_baseline.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "static_noise",
+    "method": "webrtc_mild",
+    "label": "WebRTC NS Mild (level=1)",
+    "file": "static_noise\\static_noise_webrtc_mild.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "static_noise",
+    "method": "webrtc_aggressive",
+    "label": "WebRTC NS Aggressive (level=2)",
+    "file": "static_noise\\static_noise_webrtc_aggressive.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "office_corridor",
+    "method": "none",
+    "label": "Ham Ses",
+    "file": "office_corridor\\office_corridor_none.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "office_corridor",
+    "method": "wiener",
+    "label": "Adaptif Wiener Filtresi (SIFIR YUTULMA)",
+    "file": "office_corridor\\office_corridor_wiener.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "office_corridor",
+    "method": "pretrigger_gate",
+    "label": "Pre-Trigger 50ms Gate (SIFIR KIRPILMA)",
+    "file": "office_corridor\\office_corridor_pretrigger_gate.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "office_corridor",
+    "method": "baseline",
+    "label": "Spektral Çıkarma",
+    "file": "office_corridor\\office_corridor_baseline.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "office_corridor",
+    "method": "webrtc_mild",
+    "label": "WebRTC NS Mild (level=1)",
+    "file": "office_corridor\\office_corridor_webrtc_mild.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "office_corridor",
+    "method": "webrtc_aggressive",
+    "label": "WebRTC NS Aggressive (level=2)",
+    "file": "office_corridor\\office_corridor_webrtc_aggressive.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "babble",
+    "method": "none",
+    "label": "Ham Ses",
+    "file": "babble\\babble_none.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "babble",
+    "method": "wiener",
+    "label": "Adaptif Wiener Filtresi (SIFIR YUTULMA)",
+    "file": "babble\\babble_wiener.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "babble",
+    "method": "pretrigger_gate",
+    "label": "Pre-Trigger 50ms Gate (SIFIR KIRPILMA)",
+    "file": "babble\\babble_pretrigger_gate.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "babble",
+    "method": "baseline",
+    "label": "Spektral Çıkarma",
+    "file": "babble\\babble_baseline.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "babble",
+    "method": "webrtc_mild",
+    "label": "WebRTC NS Mild (level=1)",
+    "file": "babble\\babble_webrtc_mild.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "babble",
+    "method": "webrtc_aggressive",
+    "label": "WebRTC NS Aggressive (level=2)",
+    "file": "babble\\babble_webrtc_aggressive.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "impact_noise",
+    "method": "none",
+    "label": "Ham Ses",
+    "file": "impact_noise\\impact_noise_none.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "impact_noise",
+    "method": "wiener",
+    "label": "Adaptif Wiener Filtresi (SIFIR YUTULMA)",
+    "file": "impact_noise\\impact_noise_wiener.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "impact_noise",
+    "method": "pretrigger_gate",
+    "label": "Pre-Trigger 50ms Gate (SIFIR KIRPILMA)",
+    "file": "impact_noise\\impact_noise_pretrigger_gate.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "impact_noise",
+    "method": "baseline",
+    "label": "Spektral Çıkarma",
+    "file": "impact_noise\\impact_noise_baseline.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "impact_noise",
+    "method": "webrtc_mild",
+    "label": "WebRTC NS Mild (level=1)",
+    "file": "impact_noise\\impact_noise_webrtc_mild.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  },
+  {
+    "noise_type": "impact_noise",
+    "method": "webrtc_aggressive",
+    "label": "WebRTC NS Aggressive (level=2)",
+    "file": "impact_noise\\impact_noise_webrtc_aggressive.wav",
+    "conditions": "snr0dB_rev300ms_mid"
+  }
+]

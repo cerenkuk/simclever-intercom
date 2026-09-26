@@ -1,0 +1,22 @@
+services:
+  debrief:
+    build: ..
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      DEBRIEF_LLM_MODE: qwen-local
+      DEBRIEF_LLM_MODEL_PATH: /models/Qwen_Qwen3.5-4B-Q4_K_M.gguf
+      DEBRIEF_LLM_SERVER_PATH: /opt/llama/llama-server
+      DEBRIEF_LLM_SERVER_PORT: "8091"
+      DEBRIEF_DATABASE_URL: sqlite:////app/data/debrief.db
+      DEBRIEF_MEDIA_ROOT: /app/debrief-media
+    volumes:
+      - debrief_data:/app/debrief-media
+      - debrief_db:/app/data
+      - ${DEBRIEF_MODEL_DIR:?Model klasörü gerekli}:/models:ro
+      - ${LLAMA_SERVER_DIR:?Linux llama-server klasörü gerekli}:/opt/llama:ro
+
+volumes:
+  debrief_data:
+  debrief_db:

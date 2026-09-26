@@ -1,0 +1,345 @@
+# Paket 3 Experiment & Adil Kıyas Protocol Configuration
+
+protocol_version: "pilot-v2-antiloop"
+
+protocol:
+  language: "tr"
+  temperature: 0.0
+  sample_rate: 16000
+  channels: 1
+  audio_format: "wav"
+
+decoding:
+  condition_on_previous_text: false
+  compression_ratio_threshold: 2.4
+  log_prob_threshold: -1.0
+  no_speech_threshold: 0.6
+  vad_filter: true
+  beam_size: 5
+
+normalization:
+  lowercase: true
+  remove_punctuation: true
+  numbers_as_words: true  # Sayılar söylendiği gibi metin yazımı (örn. "120" -> "yüz yirmi")
+  strip_extra_whitespace: true
+  remove_filler_words: false  # "eee", "şey" tutarlı karşılaştırma için
+
+# Ana deney koşulları (pilot-v2-antiloop)
+# Dördüncü koşul 'loudnorm' bağımsız EBU R128 normalize edilmiş ses kullanır.
+# Loudnorm, mild veya aggressive ile birleştirilmez; yalnız bağımsız dördüncü koşuldur.
+# '--condition all' prepare_audio.py'de tüm dört koşulu kapsar:
+#   none, mild, aggressive, loudnorm
+conditions:
+  - id: none
+    name: "Ham Ses (Raw 16kHz Mono PCM)"
+    source_dir: "data/audio_16k"
+  - id: mild
+    name: "WebRTC NS Mild Denoise"
+    source_dir: "data/audio_denoised_mild"
+  - id: aggressive
+    name: "WebRTC NS Aggressive Denoise"
+    source_dir: "data/audio_denoised_aggressive"
+  - id: loudnorm
+    name: "FFmpeg EBU R128 Loudnorm (bağımsız 4. koşul)"
+    source_dir: "data/audio_normalized_loudnorm"
+
+# ---------------------------------------------------------------------------
+# Y1 — Observation Addition (OA) / alfa-karisimi
+# Makale protokolu: docs/MAKALE_DENEY_PROTOKOLU_ASR_ON_ISLEME_2026-09-10.md
+#
+#   y[n] = (1 - alpha) * x_ham[n] + alpha * x_iyilestirilmis[n]
+#
+# alpha=0.0 -> tam olarak ham ses. rms_align alfa ile carpildigi icin bu uc
+#              degerde etkisizdir; cikti 'none' kosulu ile BIT-BIREBIR aynidir.
+#              Bu yuzden alpha=0.0 ayri uretilmez, 'none' kosuluna capalanir.
+# alpha=1.0 -> tam denoise, ANCAK rms_align aciksa iyilestirilmis yol ham sesin
+#              RMS'ine olceklenir; yani cikti 'mild'/'aggressive' kosulundan
+#              global bir kazanc kadar farklidir (olcekleme lineer oldugu icin
+#              SNR degismez, yalnizca seviye normalize edilir).
+#              Egrinin tamaminin ayni isleme zincirinden gecmesi icin alpha=1.0
+#              AYRI bir kosul olarak uretilir; mevcut mild/aggressive satirlari
+#              bagimsiz karsilastirma olarak durur.
+#
+# Kosul kimlikleri ve dizinleri sablonlardan uretilir; koda gomulmez.
+observation_addition:
+  enabled: true
+  base_enhancers:
+    - id: webrtc_mild
+      short: mild
+    - id: webrtc_aggressive
+      short: aggr
+  # Uretilen alfalar. 0.0 uretilmez ('none' ile bit-birebir ayni, capalanir).
+  alphas: [0.2, 0.4, 0.6, 0.8, 1.0]
+  # Uretilmeyen uc deger capasi
+  anchors:
+    "0.0": none
+  # Karisim ONCESI iki yol arasinda RMS esitleme: iyilestirilmis yol ham sesin
+  # RMS'ine olceklenir, boylece alfa gercek bir karisim agirligi olur (denoise'in
+  # sildigi enerji, alfa etkisine seviye farki olarak karismaz).
+  rms_align: true
+  # Karisim SONRASI cikti seviyesini ham sesin RMS'ine sabitleme.
+  # Gerekce: ham ve iyilestirilmis yollar kismen ilintisiz oldugundan ara
+  # alfalarda enerji yikici biçimde toplanir ve RMS ~2.9 dB dusuyor (olculdu:
+  # saha_03'te 0.01066 -> 0.00767). Whisper seviyeye duyarli oldugu icin bu,
+  # alfa etkisini seviye etkisiyle karistirir. Tek skaler kazanc SNR'i
+  # degistirmedigi icin duzeltme guvenlidir. alpha=0.0'da kazanc 1.0'dir,
+  # yani bit-birebir ozdeslik korunur.
+  output_rms_match: true
+  # Karisim sonrasi tepe kirpma korumasi (asilirsa tum sinyal olceklenir)
+  peak_guard: 0.999
+  # Dogrulama: alpha=0.0 uretimi 'none' ile bit-birebir ayni olmali
+  verify_endpoints: true
+  id_template: "oa_{short}_a{alpha_pct:03d}"
+  dir_template: "data/audio_oa_{short}_a{alpha_pct:03d}"
+  method_template: "oa_{enhancer}_alpha{alpha:.2f}"
+
+# ---------------------------------------------------------------------------
+# Y1b — Spektral alanda alfa kontrolu (fazi koruyarak)
+# Literatur: arXiv 2607.11157 (polar projeksiyon). Whisper icin U bicimli egri,
+# optimum alpha* ~= 0.25; kestirilmis faz ZARARLI, gurultulu fazi korumak
+# (gamma=0) optimum.
+#
+# Whisper'in ozellik cikaricisi: n_fft=400, hop=160, periyodik Hann, |STFT|**2,
+# ardindan mel_filters @ guc (DOGRUSAL matris). Bu nedenle guc alaninda dogrusal
+# karisim, Mel alaninda karisima matematiksel olarak esdegerdir.
+# Dogrulandi: STFT gidis-donus hatasi 4.2e-17; mel zinciri faster-whisper ile
+# 1.2e-06 farkla ayni; psm'in mel esdegerlik sapmasi alpha=0.20'de %3.4,
+# alpha=0.25'te %4.2, alpha=1.00'da %17.2 (STFT tutarlilik hatasi).
+#
+# Varyantlar:
+#   psm - guc spektrumu dogrusal karisimi  : P = (1-a)*P_ham + a*P_iyi
+#   mex - ortuk maske ussu                 : |S_ham| * (|S_iyi|/|S_ham|)**a
+# Her ikisinde faz = ham sesin fazi.
+#
+# Alfa izgarasi: 0.20 ve 0.40 mevcut OA kosullariyla BIREBIR ayni alfa oldugu
+# icin sinyal alani karisimi ile dogrudan karsilastirma saglar; 0.25 ise
+# literaturun Whisper optimumudur.
+spectral_alpha:
+  enabled: true
+  variants:
+    - id: psm
+      name: "Guc spektrumu dogrusal karisimi (Mel alani esdegeri)"
+    - id: mex
+      name: "Ortuk maske ussu A^alpha (polar projeksiyon, gamma=0)"
+  base_enhancers:
+    - id: webrtc_mild
+      short: mild
+    - id: webrtc_aggressive
+      short: aggr
+  alphas: [0.20, 0.25, 0.40]
+  stft:
+    n_fft: 400        # Whisper ile birebir
+    hop_length: 160   # Whisper ile birebir
+    window: hann_periodic
+  preserve_noisy_phase: true   # gamma=0; kestirilmis faz kullanilmaz
+  mask_clip_max: 1.0           # ortuk maske ust siniri (bastirma, yukseltme yok)
+  output_rms_match: true
+  peak_guard: 0.999
+  verify_endpoints: true
+  id_template: "sa_{variant}_{short}_a{alpha_pct:03d}"
+  dir_template: "data/audio_sa_{variant}_{short}_a{alpha_pct:03d}"
+  method_template: "sa_{variant}_{enhancer}_alpha{alpha:.2f}"
+
+# ---------------------------------------------------------------------------
+# Y2 — Kesit bazli uyarlamali alfa (zamanla degisen siddet zarfi)
+# MAKALENIN ASIL KATKISI. Sabit alfa taramasi Whisper icin zaten yayinlanmis
+# (arXiv 2607.11157); ayni makale kapatilmamis boslugu niceliyor: alfa kayit/kesit
+# basina secilebilse %20-30 bagil WER kazanci var ama gerceklenememis.
+#
+# Alfa skaler degil, cerceve basina degisen bir zarftir. Sabit zarf Y1b'nin ta
+# kendisidir (dogrulandi: fark 0.00e+00), dolayisiyla Y2 ham sesi kapsayan bir
+# UST KUMEDIR.
+#
+# Karar kurallari:
+#   vad - Konusma / konusma-disi ayrimi. Hipotez: denoise ASR'i bozuyorsa neden
+#         KONUSMAYI hasarlamasidir; oyleyse yalniz bosluklari temizlemek faydayi
+#         hasar olmadan verir. Ayrica Whisper'in halusinasyon modu sessizlik/
+#         gurultu bolgelerinde tetiklenir; oralari temizlemek onu dogrudan hedefler.
+#   snr - Cerceve SNR'ina gore surekli siddet. Dusuk SNR -> yuksek alfa,
+#         yuksek SNR -> dusuk alfa. Literaturun SNR-uyarlamali kopru
+#         modullerinin egitimsiz karsiligi.
+adaptive_alpha:
+  enabled: true
+  variant: psm              # spektral karisim varyanti (psm = Mel alani esdegeri)
+  smooth_ms: 120            # zarf yumusatma penceresi (100 kare/sn -> 12 kare)
+  mask_clip_max: 1.0
+  output_rms_match: true
+  peak_guard: 0.999
+  verify_constant_equivalence: true   # sabit zarf Y1b ile birebir olmali
+  base_enhancers:
+    - id: webrtc_mild
+      short: mild
+    - id: webrtc_aggressive
+      short: aggr
+  presets:
+    - id: vadgap
+      name: "Bosluklar tam temizlenir, konusmaya hic dokunulmaz"
+      rule: vad
+      alpha_speech: 0.00
+      alpha_nonspeech: 1.00
+      vad_threshold_db: 6.0
+      noise_floor_percentile: 10.0
+    - id: vadsoft
+      name: "Konusmaya literatur optimumu (0.20), bosluklar tam temizlenir"
+      rule: vad
+      alpha_speech: 0.20
+      alpha_nonspeech: 1.00
+      vad_threshold_db: 6.0
+      noise_floor_percentile: 10.0
+    - id: snradapt
+      name: "SNR'a gore surekli siddet (0.05-0.40)"
+      rule: snr
+      alpha_lo: 0.05
+      alpha_hi: 0.40
+      snr_mid_db: 10.0
+      snr_slope_db: 6.0
+      noise_floor_percentile: 10.0
+  id_template: "aa_{preset}_{short}"
+  dir_template: "data/audio_aa_{preset}_{short}"
+  method_template: "aa_{preset}_{enhancer}"
+
+# ---------------------------------------------------------------------------
+# Y3 — WPE dereverberation ve diger tekil kosullar
+# Birlestirme (Y4) uyelerinin tamami ayni WebRTC NS turevi oldugu icin birbirine
+# %83-88 benziyor ve bagimsiz bilgi katmiyor. WPE FARKLI bir bozulma modelini
+# hedefler (gec yanki, toplamsal gurultu degil), bu yuzden gercekten dekorele
+# bir uye adayidir.
+# Not: Paket 2'de WPE %25+ CPU ve gecikme nedeniyle CANLI AKIS icin elenmisti;
+# ASR hattimiz cevrimdisi oldugundan o kisit burada gecerli degildir.
+extra_conditions:
+  - id: wpe_t10d3
+    name: "WPE dereverberation (taps=10, delay=3, 3 yineleme)"
+    source_dir: "data/audio_wpe_t10d3"
+    denoiser_method: "wpe_taps10_delay3"
+  # Y3b — WPE'nin alfa ile seyreltilmesi.
+  # BULGU: birlestirme uyeligi icin IKI kosul birden gerekiyor: dusuk ilinti VE
+  # basabas kalite. WebRTC turevleri ilinti %84 / kalite +0.17..+0.93; WPE tam
+  # hali ilinti %78.7 / kalite +3.21. Hicbiri tek basina yetmiyor.
+  # Bu kosul WPE'nin dekorelasyonunu korurken kalitesini basabasa cekmeyi dener.
+  # Y5 — DTLN (ogrenilmis, iki asamali). FARKLI kalite-ilinti egrisi arayisi.
+  # Olculdu: 29 kosulda kalite <-> ham sese benzerlik ters bagli (r = -0.742),
+  # ama hepsi ayni aileden (WebRTC turevleri + WPE). DTLN farkli bir cins:
+  # ogrenilmis maske + zaman alani 1D konvolusyon. Egrinin disina duserse ideal
+  # uye; ustune duserse takas bastirmanin kendisinin ozelligi demektir.
+  # Not: DTLN Paket 2'de "ONNX model dosyasi yok" diye elenmisti; model artik
+  # erisilebilir (breizhn/DTLN), o eleme karari kapatiliyor.
+  - id: dtln
+    name: "DTLN — ogrenilmis iki asamali iyilestirici (gurultulu faz korunur)"
+    source_dir: "data/audio_dtln"
+    denoiser_method: "dtln_onnx_2stage"
+  # Y6 — BASTIRMA YAPMAYAN filtreleme ailesi (bkz. nonsuppressive_filters.py).
+  # Simdiye kadarki dokuz yontemin tamami gurultuyu kestirip cikariyordu; olculen
+  # takas (r = -0.741) bunun bedeli. Bu aile gurultu kestirmez, yalnizca sabit ya
+  # da yavas degisen tayfsal bicimleme uygular — egriden kacma gerekcesi olan ilk
+  # aile. Hedef de farkli: birlestirme uyeligi degil, DOGRUDAN iyilesme.
+  - id: hp80
+    name: "Yuksek geciren 80 Hz, sifir fazli (ugultu/klima enerjisi)"
+    source_dir: "data/audio_hp80"
+    denoiser_method: "highpass_80hz_zerophase"
+  - id: tilt
+    name: "Tayfsal egim duzeltme, 1 kHz uzeri +4 dB (faz korunur)"
+    source_dir: "data/audio_tilt"
+    denoiser_method: "spectral_tilt_1k_4db"
+  - id: pcen
+    name: "PCEN uyarlamali kazanc (alpha=0.5, s=0.12; seviye kaymasi <0.5 dB)"
+    source_dir: "data/audio_pcen"
+    denoiser_method: "pcen_agc_a05_s012"
+  - id: pert_speed
+    name: "D7 sradan bozma — pert_speed"
+    source_dir: "data/audio_pert_speed"
+    denoiser_method: "mundane_pert_speed"
+  - id: pert_gain
+    name: "D7 sradan bozma — pert_gain"
+    source_dir: "data/audio_pert_gain"
+    denoiser_method: "mundane_pert_gain"
+  - id: pert_clip
+    name: "D7 sradan bozma — pert_clip"
+    source_dir: "data/audio_pert_clip"
+    denoiser_method: "mundane_pert_clip"
+  - id: sa_psm_wpe_a025
+    name: "WPE + ham, psm karisimi alpha=0.25 (dekorele + basabas hedefi)"
+    source_dir: "data/audio_sa_psm_wpe_a025"
+    denoiser_method: "sa_psm_wpe_alpha0.25"
+
+# ---------------------------------------------------------------------------
+# Gelistirme alt kumesi (Kademe 1-3 taramasi icin; BASTAN DONDURULMUSTUR)
+# Sonuclara gore degistirilmez. Kazanc iddialari yalniz tam 10 kayitta dogrulanir.
+# Secim gerekcesi: Turbo 'mild - none' kontrast eksenlerini kapsamak.
+development_subset:
+  frozen: true
+  frozen_at: "2026-09-10"
+  total_minutes: 40.4
+  basenames:
+    - saha_03_img_3602                          # dongu kaydi, denoise en cok kazandiriyor (-32.00 pp)
+    - video_04_simule_hasta_gorusmesi           # dongu kaydi, orta kazanc (-6.82 pp)
+    - saha_01_img_3463                          # gurultulu saha, denoise en cok kaybettiriyor (+6.94 pp)
+    - video_01_genel_anamnez                    # temiz ama denoise bozuyor (+5.24 pp)
+    - video_05_poliklinik_anamnez_fizik_muayene # temiz, notre yakin (-0.96 pp)
+
+# Kademe 0 — hattin yeniden uretim dogrulamasi (baseline CSV ile karsilastirma)
+reproduction_check:
+  basenames:
+    - saha_03_img_3602
+    - video_04_simule_hasta_gorusmesi
+  # Referans surumu duzeltilmis baseline. Orijinal CSV satirlarinin %17.7'si
+  # bayat referansa karsi hesaplanmisti (saha_02 / saha_03); rebuild_baseline_metrics.py
+  # bunlari guncel referanslara karsi yeniden hesapladi. Kiyaslar bu surum uzerinden.
+  baseline_csv: "outputs/metrics_baseline/benchmark_results_baseline_refv2.csv"
+  # Kabul esigi: ayni model+kosul+kayit icin WER farki bu degeri asarsa hat saglikli degildir
+  max_abs_wer_delta: 0.005
+
+# ---------------------------------------------------------------------------
+# Insan dinlemesiyle DOGRULANMIS patolojik kod cozme donguleri (halusinasyon v3).
+# Kaynak: Paket 3 kapanis raporu, 9/9 aday incelemesi tamamlandi.
+# Kullanim: Bolum 7(d) — kazancin dongu baskilamadan mi, gercek tanima
+# iyilesmesinden mi geldigini ayristirmak icin katmanli raporlama.
+# Model basina, kosul basina liste. Katman analizinde model icin kosullarin
+# BIRLESIMI 'kirilgan kayit' kumesi olarak kullanilir.
+pathological_loop_records:
+  faster-whisper-large-v3-turbo-int8:
+    none:
+      - video_02_psikiyatrik_anamnez        # 'hayir' x112
+      - video_04_simule_hasta_gorusmesi     # 'herhalde' x73
+      - saha_03_img_3602                    # 'cek' x74
+    mild:
+      - video_02_psikiyatrik_anamnez        # soru tekrari x12
+  faster-whisper-large-v3-int8: {}          # 10/10 kayitta 0 dongu
+  faster-whisper-medium-int8: {}            # 0 dongu
+
+# Bolum 7 — istatistiksel plan parametreleri
+statistics:
+  bootstrap_iterations: 10000
+  confidence_level: 0.95
+  random_seed: 20260910          # tekrarlanabilirlik icin sabit
+  leave_one_out: true
+
+# Taramada kullanilan modeller (M3 yalniz nihai dogrulamada)
+sweep_models:
+  - faster-whisper-large-v3-int8
+  - faster-whisper-large-v3-turbo-int8
+confirmation_models:
+  - faster-whisper-large-v3-int8
+  - faster-whisper-large-v3-turbo-int8
+  - faster-whisper-medium-int8
+
+# EBU R128 Loudnorm Parametreleri (sabit ve belgelenmiş)
+# FFmpeg iki geçişli (two-pass) loudnorm filtresi kullanılır.
+# Bu değerler prepare_audio.py tarafından buradan okunur;
+# kod içine sabit olarak gömülmez.
+loudnorm:
+  integrated_loudness: -23.0    # EBU R128 hedef entegre ses yüksekliği (LUFS)
+  loudness_range: 7.0           # EBU R128 hedef ses yüksekliği aralığı (LU)
+  true_peak: -2.0               # Maksimum gerçek tepe seviyesi (dBTP)
+  sample_rate: 16000            # Çıkış örnekleme oranı (Hz)
+  channels: 1                   # Çıkış kanal sayısı (Mono)
+  linear: true                  # Doğrusal normalize (iki geçişte daha doğru)
+  print_format: "json"          # FFmpeg ilk geçiş çıktı formatı
+
+metrics:
+  primary: "wer"
+  secondary: "cer"
+  domain_specific: "medical_term_accuracy"
+  safety: "hallucination_count"
+  performance: ["rtf", "vram_peak_mb", "ram_peak_mb"]
+
+hallucination_threshold_seconds: 2.0

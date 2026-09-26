@@ -1,0 +1,30 @@
+# Paket 3 — Commercial Cloud API Upload Security Policy
+policy_version: "v1.0-failclosed"
+provider: "gemini"
+description: "Strict security policy ensuring no field/clinical audio recordings are uploaded to public cloud APIs."
+
+allowlist_basenames:
+  - "video_01_genel_anamnez"
+  - "video_02_psikiyatrik_anamnez"
+  - "video_03_pediatrik_anamnez"
+  - "video_04_simule_hasta_gorusmesi"
+  - "video_05_poliklinik_anamnez_fizik_muayene"
+  - "video_06_gogus_hastaliklari_oyku_alma"
+
+denied_prefixes:
+  - "saha_"
+
+allowed_source_group: "video"
+deny_unknown: true
+
+security_enforcement:
+  fail_closed: true
+  send_field_audio: false
+  send_reference_text: false  # Reference text is used exclusively for local WER/CER calculation; never sent to model
+
+paths:
+  allowed_audio_root: "paket3_asr/data"
+
+output_isolation_policy:
+  isolated_csv: "paket3_asr/outputs/metrics/commercial_api_results.csv"
+  prevent_benchmark_mix: true

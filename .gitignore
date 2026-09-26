@@ -1,0 +1,47 @@
+# Environments and keys
+.env
+.env.*
+!.env.example
+*.log
+
+# Databases & Media
+*.db
+*.sqlite3
+debrief.local.db
+debrief-media/
+test-media/
+benchmark-results/
+
+# Models & Big Binaries (Local weights)
+models/
+models_onnx/
+*.bin
+*.onnx
+!shared/core/silero_vad.onnx
+*.gguf
+*.pt
+*.safetensors
+
+# Python
+__pycache__/
+*.py[cod]
+.venv*/
+venv/
+env/
+.pytest_cache/
+.ruff_cache/
+.test-tmp*/
+.pytest-*
+
+# Build & Dist
+build/
+dist/
+dist_output/
+build_output/
+build_release/
+release_dist/
+*.spec
+
+# Office Reports & Diaries
+*.pdf
+*.docx

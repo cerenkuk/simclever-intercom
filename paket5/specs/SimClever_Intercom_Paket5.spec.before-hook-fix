@@ -1,0 +1,127 @@
+# -*- mode: python ; coding: utf-8 -*-
+# SimClever_Intercom_Paket5.spec
+# PyInstaller onedir build spec
+# Çalıştırmak için:
+#   python -m PyInstaller --noconfirm --clean paket5\specs\SimClever_Intercom_Paket5.spec
+
+import sys
+import os
+from pathlib import Path
+
+# Proje kökü: spec dosyası paket5/specs/ içinde olduğu için 2 üst dizin
+_ROOT = Path(SPECPATH).resolve().parents[1]
+
+block_cipher = None
+
+a = Analysis(
+    [str(_ROOT / 'run_intercom_p5.py')],
+    pathex=[str(_ROOT)],
+    binaries=[
+        # opus.dll – opsiyonel Opus codec desteği
+        (str(_ROOT / 'paket1' / 'opus.dll'), '.'),
+    ],
+    datas=[
+        # Silero VAD modeli
+        (str(_ROOT / 'shared' / 'core' / 'silero_vad.onnx'), 'shared/core'),
+        # Konfigürasyon dosyaları
+        (str(_ROOT / 'config' / 'teacher.json'), 'config'),
+        (str(_ROOT / 'config' / 'student.json'), 'config'),
+        (str(_ROOT / 'config' / 'network.json'), 'config'),
+        (str(_ROOT / 'config' / 'audio.json'),   'config'),
+    ],
+    hiddenimports=[
+        'paket5',
+        'paket5.ui_main',
+        'paket5.ui_settings',
+        'shared',
+        'shared.intercom_engine',
+        'shared.events',
+        'shared.events.event_bus',
+        'shared.recording',
+        'shared.recording.recorder',
+        'shared.recording.sidecar',
+        'shared.core',
+        'shared.core.audio_io',
+        'shared.core.aec',
+        'shared.core.vad',
+        'shared.core.denoiser',
+        'shared.core.codec',
+        'shared.core.recorder',
+        'sounddevice',
+        'soundfile',
+        'numpy',
+        'PyQt5',
+        'PyQt5.QtWidgets',
+        'PyQt5.QtCore',
+        'PyQt5.QtGui',
+        'webrtcvad',
+        'opuslib_next',
+    ],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=[
+        # Paket 3 tamamen dışarıda
+        'paket3_asr',
+        # Çakışan Qt bağlamaları – yalnızca PyQt5 kullanılıyor
+        'PySide2',
+        'PySide6',
+        'PyQt4',
+        'PyQt6',
+        # Ağır ML paketleri – hook'ları Anaconda'da çöküyor
+        'torch',
+        'torchvision',
+        'torchaudio',
+        'tensorflow',
+        'keras',
+        'sklearn',
+        'scipy',
+        'pandas',
+        'cv2',
+        'PIL',
+        # Gereksiz ağır paketler (Anaconda ortamında mevcut ama uygulamada kullanılmıyor)
+        'matplotlib',
+        'sphinx',
+        'docutils',
+        'jedi',
+        'parso',
+        'black',
+        'yapf',
+        'nbformat',
+        'zmq',
+        'tkinter',
+        '_tkinter',
+        'sqlite3',
+    ],
+    win_no_prefer_redirects=False,
+    win_private_assemblies=False,
+    cipher=block_cipher,
+    noarchive=False,
+)
+
+pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    [],
+    exclude_binaries=True,
+    name='SimClever_Intercom_Paket5',
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=False,
+    console=False,      # GUI uygulaması; konsol penceresi açılmaz
+    icon=None,
+)
+
+coll = COLLECT(
+    exe,
+    a.binaries,
+    a.zipfiles,
+    a.datas,
+    strip=False,
+    upx=False,
+    upx_exclude=[],
+    name='SimClever_Intercom_Paket5',
+)
